@@ -1,0 +1,42 @@
+{
+    "manifest_version": 3,
+    "name": "Sparx Extension",
+    "version": "1.0",
+    "description": "Stores bookword codes and has dark theme",
+
+    "background": {
+      "service_worker": "background.js"
+    },
+
+    "host_permissions": [
+      "*://www.sparxmaths.uk/*",
+      "https://auth.sparxmaths.uk/*"
+    ],
+  
+    "icons": {
+      "128": "Logo2.png"
+    },
+
+    "action": {
+      "default_icon": {
+        "128": "Logo2.png"
+      },
+      "default_title": "Sparx Extension",
+      "default_popup": "popup.html"
+    },
+    
+    "permissions": [
+      "activeTab",
+      "storage",
+      "downloads"
+    ],
+
+    "content_scripts": [
+      {
+        "matches": ["*://www.sparxmaths.uk/*", "https://auth.sparxmaths.uk/*"],
+        "js": ["jquery.js", "contentScript.js"]
+      }
+    ]
+  
+  }
+  
