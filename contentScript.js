@@ -139,6 +139,7 @@ async function main() {
 
             // Show saved answer 
             if (document.querySelector('#custom-answer') === null) {
+                console.log("Trying to show answer...")
                 if (!answer.every(hasCurly)) {
                     const textNode = document.createElement('b');
                     const divNode = document.createElement('div');
@@ -154,12 +155,12 @@ async function main() {
                     const imageNode = document.createElement('img');
                     imageNode.src = answer.toString();
                     imageNode.setAttribute('id', 'custom-answer');
-                    imageNode.style['height'] = "4rem";
+                    imageNode.style['width'] = "50%";
 
                     divNode.appendChild(imageNode);
                     divNode.style['margin-bottom'] = '20px';
                     divNode.style.color = grey;
-                    document.querySelector('.location-title').append(divNode);
+                    document.querySelector('.wac-text-container').append(divNode);
                 } else {
                     let answers = answer.join('');
                     const textNode = document.createElement('b');
