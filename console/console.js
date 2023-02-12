@@ -4,33 +4,75 @@ console.log("Script is running");
 // THEMES 
 const themes = {
     1: {
+        'darkest': '#212529',
+        'dark':  '#343a40',
+        'light':  '#495057',
+        'lightest': '#6c757d',
+    },
+
+    2: {
+        'darkest': '#7f5539',
+        'dark':  '#9c6644',
+        'light':  '#b08968',
+        'lightest': '#ddb892',
+    },
+
+    3: {
         'darkest': '#241E92',
         'dark':  '#5432D3',
         'light':  '#7B6CF6',
         'lightest': '#E5A5FF',
     },
 
-    2: {
-        'darkest': '#000000',
-        'dark':  '#150050',
-        'light':  '#3F0071',
-        'lightest': '#610094',
+    4: {
+        'darkest': '#10002b',
+        'dark':  '#3c096c',
+        'light':  '#5a189a',
+        'lightest': '#9d4edd',
     },
 
-    3: {
+    5: {
+        'darkest': '#001233',
+        'dark':  '#001845',
+        'light':  '#023e7d',
+        'lightest': '#0466c8',
+    },
+
+    6: {
+        'darkest': '#590d22',
+        'dark':  '#800f2f',
+        'light':  '#a4133c',
+        'lightest': '#ff4d6d',
+    },
+
+    7: {
         'darkest': '#000000',
         'dark':  '#3D0000',
         'light':  '#950101',
-        'lightest': '#FF0000',
+        'lightest': '#EC0000',
+    },
+
+    8: {
+        'darkest': '#132a13',
+        'dark':  '#31572c',
+        'light':  '#4f772d',
+        'lightest': '#90a955',
+    },
+
+    9: {
+        'darkest': '#1a001c',
+        'dark':  '#250327',
+        'light':  '#2f0631',
+        'lightest': '#3a093c',
     }
 }
 
 
 // Colour palette 
-document.documentElement.style.setProperty('--darkest', themes[1]['darkest']);
-document.documentElement.style.setProperty('--dark', themes[1]['dark']);
-document.documentElement.style.setProperty('--light', themes[1]['light']);
-document.documentElement.style.setProperty('--lightest', themes[1]['lightest']);
+document.documentElement.style.setProperty('--darkest', themes[3]['darkest']);
+document.documentElement.style.setProperty('--dark', themes[3]['dark']);
+document.documentElement.style.setProperty('--light', themes[3]['light']);
+document.documentElement.style.setProperty('--lightest', themes[3]['lightest']);
 
 const grey = '#f8f8f7';
 const orange = '#f46815';
@@ -414,7 +456,7 @@ async function credits() {
     console.log.apply(console, ["%c Designed and Developed by Alex lo Storto %c\ud83d\ude80 ","color: #fff; background: #8000ff; padding:5px 0;","color: #fff; background: #242424; padding:5px 0 5px 5px;"])
 }
 
-const themeStyles = '.themes-container{display:flex;align-items:center;justify-content:center;flex-direction:column;width:40vw}.themes-container ul{border:2px solid #fff;padding:0;display:flex;flex-direction:column;width:100%}.themes-container ul li{list-style-type:none;display:flex;flex-direction:row}.themes-container ul li div{background-color:orange;height:50px;width:25%}.themes-container ul li:hover{cursor:pointer;filter:brightness(80%)}@media (max-width: 1000px){.themes-container{width:60vw}}';
+const themeStyles = '.themes-container{display:flex;align-items:center;justify-content:center;flex-direction:column;width:500px}.themes-container ul{border:2px solid #fff;padding:0;display:flex;flex-direction:column;width:100%}.themes-container ul li{list-style-type:none;display:flex;flex-direction:row}.themes-container ul li div{background-color:orange;height:50px;width:25%}.themes-container ul li:hover{cursor:pointer;filter:brightness(80%)}@media (max-width: 1000px){.themes-container{width:60vw}}';
 const darkModeStyles = ':root{--orange:#F46815;--grey:#F8F8F7;--dark-grey:#E9E9E9;--darkest:#241E92;--dark:#5432D3;--light:#7B6CF6;--lightest:#E5A5FF}.um-login-container,.package-container,.view-body,.main-view{background:var(--darkest)!important}.entry-area-bubble .text,.answer .markdown.text-container{color:var(--darkest)!important}.package-filter-list,.revision-homework-button-container,.revision-topic-page,.package-list > div > span > ul > div,.rewards-section.insights-lifetime-totals,.rewards-section-header,.rewards-section-content,.rewards-progress-levels,.rewards-faqs .accordion-element-header{background:var(--dark)!important}.package-list > div > span > ul > div,.rewards-section{border-color:var(--dark)!important}.um-header,.package-heading,.footer-cookie-banner-container,.footer-container,.revision-tab,.revision-task,.revision-strand-button,.revision-strand-page,.revision-homework-button,.activity-feed-day,.status-bar,.status-bar-label-text,.btn-menu-item,.question-only,.answer-only,.question-text,.skill-delivery-view .view-body,.wac-text-container .bookwork-code,.insights-lifetime-total,.rewards-section-row,.rewards-progress-level:hover{background:var(--light)!important}.revision-tabs{border-bottom:var(--light)!important}.btn-menu-item,.package-heading,.revision-homework-button{border:1px solid var(--light)!important}.wac-text-container .bookwork-code,.accordion-element-header,.activity-feed-work,.dummytaskitem{border:none!important}.um-login-box__content,.revision-tab.revision-tab-active,.accordion-element-header,.activity-feed-work,.status-bar-menu-item,.status-bar-menu-button,.revision-task-item,#answer-wac-box,.choice-wac-options{background:var(--lightest)!important}.status-bar-menu-button{border:solid var(--lightest)!important}.status-bar-menu-item{border-color:var(--lightest)!important}.school-selector,.revision-strand-button,.accordion-element-header,.revision-substrand-extra,.activity-feed-day > h2,.activity-feed-work,.activity-feed-work-counts,.revision-location-stream,.btn-menu-item,.revision-topic-page,.revision-homework-button,.package-heading,.question-text > div > .text,.result-inner h2,.result-inner .result-subtitle-prominent,.result-inner h1.incorrect,.text-container,.answer-part > div > .text,.wac-header-container,.wac-text,.minigame-description > div,.rewards-section-header-title,.insights-lifetime-total,.rewards-section-row,.rewards-progress-level-label-text{color:var(--grey)!important}.answer-markup.choice-wac-option.choice.choice-answer-markup,.choice-text{background:var(--grey)!important}.revision-location-stream,.revision-strand-button{border-color:var(--grey)!important}.active{border:1px solid var(--grey)!important}.package-filter-arrow{border-left-color:var(--grey)!important}.package-list > div > span > ul > div > .task-title{color:var(--dark-grey)!important}.selected .text,.choice-wac-option.selected,.rewards-progress-level:hover .rewards-progress-level-label-text{color:var(--orange)!important}.rewards-section-header{border-radius:0!important}.revision-strand-icon{filter:grayscale(100%) brightness(5)!important}.status-bar-menu-item:not(:first-child):before{left:-3px!important;width:110%!important;border-bottom:1px solid var(--darkest)!important}.status-bar-menu-item-img{filter:grayscale(100%) brightness(5)!important}.taskitem > .icon{filter:brightness(5)!important}.status-bar-menu-item:hover > .status-bar-menu-item-img{filter:none!important}';
 
 // Katex 
