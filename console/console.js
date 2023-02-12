@@ -407,7 +407,9 @@ const sleep = ms => {
     return new Promise(resolve => setTimeout(resolve, ms))
 }
 
-function credits() {
+async function credits() {
+    await sleep(200);
+    console.clear();
     console.log.apply(console, ["%c Thanks for using my Sparx program! ","color: #fff; background: #8000ff; padding:5px 0;"])
     console.log.apply(console, ["%c Designed and Developed by Alex lo Storto %c\ud83d\ude80 ","color: #fff; background: #8000ff; padding:5px 0;","color: #fff; background: #242424; padding:5px 0 5px 5px;"])
 }
@@ -430,9 +432,5 @@ document.head.insertAdjacentHTML('beforeend','<style>' + themeStyles + '</style>
 document.head.insertAdjacentHTML('beforeend','<style>' + darkModeStyles + '</style>');
 
 main();
-
-await sleep(200);
-
-console.clear();
 
 credits();
