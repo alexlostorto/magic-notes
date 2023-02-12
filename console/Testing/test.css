@@ -71,11 +71,17 @@ body {
 .package-filter-list,
 .revision-homework-button-container,
 .revision-topic-page,
-.package-list > div > span > ul > div {
+.package-list > div > span > ul > div,
+.rewards-section.insights-lifetime-totals,
+.rewards-section-header,
+.rewards-section-content,
+.rewards-progress-levels,
+.rewards-faqs .accordion-element-header {
     background: var(--dark) !important;
 }
 
-.package-list > div > span > ul > div {
+.package-list > div > span > ul > div,
+.rewards-section {
     border-color: var(--dark) !important;
 }
 
@@ -96,7 +102,10 @@ body {
 .answer-only,
 .question-text,
 .skill-delivery-view .view-body,
-.wac-text-container .bookwork-code {
+.wac-text-container .bookwork-code,
+.insights-lifetime-total,
+.rewards-section-row,
+.rewards-progress-level:hover {
     background: var(--light) !important;
 }
 
@@ -110,7 +119,10 @@ body {
     border: 1px solid var(--light) !important;
 }
 
-.wac-text-container .bookwork-code {
+.wac-text-container .bookwork-code,
+.accordion-element-header,
+.activity-feed-work,
+.dummytaskitem {
     border: none !important;
 }
 
@@ -154,7 +166,11 @@ body {
 .answer-part > div > .text,
 .wac-header-container,
 .wac-text,
-.minigame-description > div {
+.minigame-description > div,
+.rewards-section-header-title,
+.insights-lifetime-total,
+.rewards-section-row,
+.rewards-progress-level-label-text {
     color: var(--grey) !important;
 }
 
@@ -181,10 +197,33 @@ body {
 }
 
 .selected .text,
-.choice-wac-option.selected {
+.choice-wac-option.selected,
+.rewards-progress-level:hover .rewards-progress-level-label-text {
     color: var(--orange) !important;
 }
 
-.dummytaskitem {
-    border: none !important;
+.rewards-section-header {
+    border-radius: 0 !important;
+}
+
+.revision-strand-icon {
+    filter: grayscale(100%) brightness(5) !important;
+}
+
+.status-bar-menu-item:not(:first-child):before {
+    left: -3px !important;
+    width: 110% !important;
+    border-bottom: 1px solid var(--darkest) !important;
+}
+
+.status-bar-menu-item-img {
+    filter: grayscale(100%) brightness(5) !important;
+}
+
+.taskitem > .icon {
+    filter: brightness(5) !important;
+}
+
+.status-bar-menu-item:hover > .status-bar-menu-item-img {
+    filter: none !important;
 }
