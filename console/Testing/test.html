@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- HEAD -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="keywords"
+      content="alexlostorto, Alex, Alex lo Storto, Alex Lo Storto, Photography Portfolio, portfolio, portfolio website, Portfolio Website, Photography, photographer, programmer, coder, web developer, open source, space-themed, space"
+    />
+    <meta
+      name="description"
+      content="Personal portfolio displaying my photography/web development skills."
+    />
+    <meta name="author" content="Alex lo Storto" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../../Icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../../Icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../../Icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://api.countapi.xyz/hit/alexlostorto.github.io/visits?callback=liveViews"
+      async
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+    <link rel="stylesheet" href="test.css" />
+    <title>Alex lo Storto</title>
+  </head>
+
+  <!-- BODY -->
+  <body>
+    <span id="math">\[ 2+\frac{1}{x} \]</span>
+    <!-- Themes -->
+    <section class="themes-container">
+      <h2>Themes</h2>
+      <ul>
+        <li>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </li>
+        <li>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </li>
+        <li>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Custom cursor  -->
+    <div class="custom-cursor">
+      <div id="cursor" class="custom-cursor inner"></div>
+      <div class="custom-cursor outer"></div>
+    </div>
+
+    <script>
+      katex.render("f(x)^2  = \\sqrt{y}", document.getElementById('math'), {
+          throwOnError: false
+      });
+    </script>
+  </body>
+</html>
