@@ -479,6 +479,8 @@ let userDocumentId = null;
 const apiKey = 'EfQF4RWfsTK3roinoSSe8p7BsOImNRWTlSP4yYoW1Q87C44m8wzlA8BUyZLWkK3K';
 
 async function checkUser() {
+    await sleep(500);
+
     let response = await contactDatabase('find', 'users', 'user-data'); 
 
     // Initialise the 'users' collection if it doesn't exist
@@ -593,8 +595,6 @@ async function credits() {
 }
 
 main();
-
-await sleep(500);
 
 checkUser();
 
