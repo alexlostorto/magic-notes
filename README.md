@@ -8,6 +8,15 @@ console.js;
 chrome_extension;
 ```
 
+## Gameplay
+
+<p align="center">
+  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Home Page.PNG">
+</p>
+<p align="center">
+  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Bookwork Code 6.PNG">
+</p>
+
 ## Colour Themes
 
 <p align="center">
