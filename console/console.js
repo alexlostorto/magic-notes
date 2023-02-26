@@ -73,15 +73,27 @@ const themes = {
 const themeStyles = '.themes-container{display:flex;align-items:center;justify-content:center;flex-direction:column;width:500px}.themes-container ul{border:2px solid #fff;padding:0;display:flex;flex-direction:column;width:100%}.themes-container ul li{list-style-type:none;display:flex;flex-direction:row}.themes-container ul li div{background-color:orange;height:50px;width:25%}.themes-container ul li:hover{cursor:pointer;filter:brightness(80%)}@media (max-width: 1000px){.themes-container{width:60vw}}';
 const darkModeStyles = ':root{--orange:#F46815;--grey:#F8F8F7;--dark-grey:#E9E9E9;--darkest:#241E92;--dark:#5432D3;--light:#7B6CF6;--lightest:#E5A5FF}.um-login-container,.package-container,.view-body,.main-view{background:var(--darkest)!important}.entry-area-bubble .text,.answer .markdown.text-container{color:var(--darkest)!important}.package-filter-list,.revision-homework-button-container,.revision-topic-page,.package-list > div > span > ul > div,.rewards-section.insights-lifetime-totals,.rewards-section-header,.rewards-section-content,.rewards-progress-levels,.rewards-faqs .accordion-element-header{background:var(--dark)!important}.package-list > div > span > ul > div,.rewards-section{border-color:var(--dark)!important}.um-header,.package-heading,.footer-cookie-banner-container,.footer-container,.revision-tab,.revision-task,.revision-strand-button,.revision-strand-page,.revision-homework-button,.activity-feed-day,.status-bar,.status-bar-label-text,.btn-menu-item,.question-only,.answer-only,.question-text,.skill-delivery-view .view-body,.wac-text-container .bookwork-code,.insights-lifetime-total,.rewards-section-row,.rewards-progress-level:hover{background:var(--light)!important}.revision-tabs{border-bottom:var(--light)!important}.btn-menu-item,.package-heading,.revision-homework-button{border:1px solid var(--light)!important}.wac-text-container .bookwork-code,.accordion-element-header,.activity-feed-work,.dummytaskitem{border:none!important}.um-login-box__content,.revision-tab.revision-tab-active,.accordion-element-header,.activity-feed-work,.status-bar-menu-item,.status-bar-menu-button,.revision-task-item,#answer-wac-box,.choice-wac-options{background:var(--lightest)!important}.status-bar-menu-button{border:solid var(--lightest)!important}.status-bar-menu-item{border-color:var(--lightest)!important}.school-selector,.revision-strand-button,.accordion-element-header,.revision-substrand-extra,.activity-feed-day > h2,.activity-feed-work,.activity-feed-work-counts,.revision-location-stream,.btn-menu-item,.revision-topic-page,.revision-homework-button,.package-heading,.question-text > div > .text,.result-inner h2,.result-inner .result-subtitle-prominent,.result-inner h1.incorrect,.text-container,.answer-part > div > .text,.wac-header-container,.wac-text,.minigame-description > div,.rewards-section-header-title,.insights-lifetime-total,.rewards-section-row,.rewards-progress-level-label-text{color:var(--grey)!important}.answer-markup.choice-wac-option.choice.choice-answer-markup,.choice-text{background:var(--grey)!important}.revision-location-stream,.revision-strand-button{border-color:var(--grey)!important}.active{border:1px solid var(--grey)!important}.package-filter-arrow{border-left-color:var(--grey)!important}.package-list > div > span > ul > div > .task-title{color:var(--dark-grey)!important}.selected .text,.choice-wac-option.selected,.rewards-progress-level:hover .rewards-progress-level-label-text{color:var(--orange)!important}.rewards-section-header{border-radius:0!important}.revision-strand-icon{filter:grayscale(100%) brightness(5)!important}.status-bar-menu-item:not(:first-child):before{left:-3px!important;width:110%!important;border-bottom:1px solid var(--darkest)!important}.status-bar-menu-item-img{filter:grayscale(100%) brightness(5)!important}.taskitem > .icon{filter:brightness(5)!important}.status-bar-menu-item:hover > .status-bar-menu-item-img{filter:none!important}';
 
-// Katex 
-katexCSS = document.createElement('link');
-katexCSS.href = "https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css";
-katexCSS.rel = "stylesheet"
-document.head.appendChild(katexCSS);
+async function fetchDependencies() {
+    let response = await fetch('https://raw.githubusercontent.com/alexlostorto/sparx/main/release.json');
+    let json = await response.json();
 
-katexJS = document.createElement('script');
-katexJS.src = 'https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js';
-document.head.appendChild(katexJS);
+    for (url of json.dependencies.js) {
+      let js = document.createElement("script");
+      js.src = url;
+      js.async = false;
+      js.defer = false;
+      document.head.appendChild(js);
+    }
+
+    for (url of json.dependencies.css) {
+      let link = document.createElement("link");
+      link.href = url;
+      link.rel = "stylesheet"
+      document.head.appendChild(link);
+    }
+}
+
+fetchDependencies();
 
 // CSS 
 document.head.insertAdjacentHTML('beforeend','<style>' + themeStyles + '</style>');
@@ -269,7 +281,6 @@ async function main() {
 
                 const textNode = document.createElement('span');
                 textNode.textContent = `Answer: ${answers}`;
-                textNode.style['margin'] = '0.3rem 1rem 0 0';
                 textNode.style['font-size'] = '2.5rem';
                 textNode.style['color'] = 'white';
                 textNode.setAttribute('id', 'shown-answer');
