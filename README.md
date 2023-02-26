@@ -20,10 +20,8 @@ chrome_extension;
 ## Colour Themes
 
 <p align="center">
-  <img width="70%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 1.PNG">
-</p>
-<p align="center">
-  <img width="70%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 2.PNG">
+  <img width="50%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 1.PNG">
+  <img width="50%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 2.PNG">
 </p>
 <p align="center">
   <img width="70%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 3.PNG">
