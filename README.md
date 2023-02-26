@@ -14,28 +14,28 @@ chrome_extension;
   <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 1.PNG">
 </p>
 <p align="center">
-  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 1.PNG">
+  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 2.PNG">
 </p>
 <p align="center">
-  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 1.PNG">
+  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 3.PNG">
 </p>
 <p align="center">
-  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 1.PNG">
+  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 4.PNG">
 </p>
 <p align="center">
-  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 1.PNG">
+  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 5.PNG">
 </p>
 <p align="center">
-  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 1.PNG">
+  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 5.PNG">
 </p>
 <p align="center">
-  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 1.PNG">
+  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 6.PNG">
 </p>
 <p align="center">
-  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 1.PNG">
+  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 7.PNG">
 </p>
 <p align="center">
-  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 1.PNG">
+  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 8.PNG">
 </p>
 
 ## Scripts
