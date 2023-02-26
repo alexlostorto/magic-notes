@@ -156,7 +156,7 @@ async function checkUser() {
         // console.log(`${userName} is not in the database`);
         
         // Create a new document for the user's answers in the 'answers' database
-        newDocumentId = await (await contactDatabase('insertOne', 'answers', 'user-data', {})).insertedId;
+        let newDocumentId = await (await contactDatabase('insertOne', 'answers', 'user-data', {})).insertedId;
         // console.log(newDocumentId);
 
         users[userName] = newDocumentId;
@@ -168,7 +168,7 @@ async function checkUser() {
         // console.log(`${userName} document is not in the 'answers' database`);
 
         // Create a new document for the user's answers in the 'answers' database
-        newDocumentId = await (await contactDatabase('insertOne', 'answers', 'user-data', {answers: {}})).insertedId;
+        let newDocumentId = await (await contactDatabase('insertOne', 'answers', 'user-data', {answers: {}})).insertedId;
         // console.log(newDocumentId);
 
         users[userName] = newDocumentId;
@@ -317,17 +317,7 @@ async function main() {
             console.log(bookworkAnswer);
 
             // Show saved answer 
-            if (!bookworkAnswer.every(hasCurly)) {
-                const textNode = document.createElement('b');
-                const divNode = document.createElement('div');
-                textNode.innerText = `Answer: ${bookworkAnswer.join(', ')}`;
-                textNode.setAttribute('id', 'custom-answer');
-
-                divNode.appendChild(textNode);
-                divNode.style['margin-bottom'] = '20px';
-                divNode.style.color = grey;
-                document.querySelector('.wac-text-container').append(divNode);
-            } else if (bookworkAnswer.every(hasSource)) {
+            if (bookworkAnswer.every(hasSource)) {
                 const divNode = document.createElement('div');
                 const imageNode = document.createElement('img');
                 imageNode.src = bookworkAnswer.toString();
