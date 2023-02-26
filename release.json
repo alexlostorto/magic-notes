@@ -1,0 +1,19 @@
+{
+    "version": "v2.4",
+    "version code": 5,
+    "dependencies": [
+      "https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js",
+      "https://cdn.jsdelivr.net/gh/wmartinmimi/md.html@v2.4/path-validate.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js",
+      "https://cdn.jsdelivr.net/npm/showdown@v2.1.0/dist/showdown.min.js",
+      "https://cdn.jsdelivr.net/gh/wmartinmimi/md.html@v2.4/md.html.js",
+      "https://cdn.jsdelivr.net/gh/wmartinmimi/md.html@v2.4/save-popup.js",
+      "https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js",
+      "https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js",
+      "https://cdn.jsdelivr.net/gh/wmartinmimi/md.html@v2.4/renderer.js"
+    ],
+    "contentScript": [
+        "https://cdn.jsdelivr.net/gh/alexlostorto/sparx@v2.0.2/console/console.js"
+    ],
+    "licenses": "https://cdn.jsdelivr.net/gh/wmartinmimi/md.html@v2.4/licenses.json"
+  }
