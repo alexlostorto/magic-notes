@@ -4,8 +4,6 @@
         "js": ["https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"],
         "css": ["https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"]
     },
-    "contentScript": [
-        "https://cdn.jsdelivr.net/gh/alexlostorto/sparx@v2.0.2/console/console.js"
-    ],
+    "contentScript": "https://cdn.jsdelivr.net/gh/alexlostorto/sparx@v2.0.2/console/console.js",
     "licenses": "https://cdn.jsdelivr.net/gh/alexlostorto/sparx@v2.0.2/licenses.json"
   }

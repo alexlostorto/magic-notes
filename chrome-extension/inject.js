@@ -3,7 +3,7 @@ async function fetchScript() {
     let json = await response.json();
 
     let js = document.createElement("script");
-    js.src = json.contentScript[0];
+    js.src = json.contentScript;
     js.async = false;
     js.defer = false;
     document.head.appendChild(js);
