@@ -1,8 +1,4 @@
-[{
-    "name": "jquery/jquery",
-    "type": "MIT",
-    "url": "https://github.com/jquery/jquery/blob/main/LICENSE.txt"
-  },
+[
   {
     "name": "KaTeX/KaTeX",
     "type": "MIT",
