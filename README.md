@@ -26,9 +26,6 @@ chrome_extension;
   <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 5.PNG">
 </p>
 <p align="center">
-  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 5.PNG">
-</p>
-<p align="center">
   <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 6.PNG">
 </p>
 <p align="center">
@@ -36,6 +33,9 @@ chrome_extension;
 </p>
 <p align="center">
   <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 8.PNG">
+</p>
+<p align="center">
+  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 9.PNG">
 </p>
 
 ## Scripts
