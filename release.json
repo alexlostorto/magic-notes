@@ -1,6 +1,5 @@
 {
-    "version": "v2.4",
-    "version code": 5,
+    "version": "v2.0.2",
     "dependencies": {
         "js": ["https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"],
         "css": ["https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"]
@@ -8,5 +7,5 @@
     "contentScript": [
         "https://cdn.jsdelivr.net/gh/alexlostorto/sparx@v2.0.2/console/console.js"
     ],
-    "licenses": "https://cdn.jsdelivr.net/gh/wmartinmimi/md.html@v2.4/licenses.json"
+    "licenses": "https://cdn.jsdelivr.net/gh/alexlostorto/sparx@v2.0.2/licenses.json"
   }
