@@ -153,11 +153,8 @@ async function checkUser() {
     response = await contactDatabase('findOne', 'answers', 'user-data', { "_id": { "$oid": users[userName] }}); 
 
     if (!userName in users) {
-        // console.log(`${userName} is not in the database`);
-        
         // Create a new document for the user's answers in the 'answers' database
         let newDocumentId = await (await contactDatabase('insertOne', 'answers', 'user-data', {})).insertedId;
-        // console.log(newDocumentId);
 
         users[userName] = newDocumentId;
         
@@ -165,20 +162,14 @@ async function checkUser() {
 
         return
     } else if (await( await contactDatabase('findOne', 'answers', 'user-data', { "_id": { "$oid": userDocumentId }})).document === null) {
-        // console.log(`${userName} document is not in the 'answers' database`);
-
         // Create a new document for the user's answers in the 'answers' database
         let newDocumentId = await (await contactDatabase('insertOne', 'answers', 'user-data', {answers: {}})).insertedId;
-        // console.log(newDocumentId);
 
         users[userName] = newDocumentId;
         
         contactDatabase('updateOne', 'users', 'user-data', [{"users": users}, documentId]);
     } else {
-        console.log(`${userName} is already in the database`);
-        console.log(`${userName}'s document ID: ${users[userName]}`)
         userData = await (await contactDatabase('findOne', 'answers', 'user-data', { "_id": { "$oid": userDocumentId }})).document.answers;
-        console.log(userData);
     }
 }
 
