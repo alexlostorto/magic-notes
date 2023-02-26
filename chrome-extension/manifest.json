@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Sparx Extension",
-    "version": "1.0",
+    "version": "2.0.2",
     "description": "Stores bookword codes and has dark theme",
 
     "background": {
@@ -34,9 +34,14 @@
     "content_scripts": [
       {
         "matches": ["*://www.sparxmaths.uk/*", "https://auth.sparxmaths.uk/*"],
-        "js": ["jquery.js", "contentScript.js"]
+        "js": ["contentScript.js"]
       }
-    ]
+    ],
+
+    "web_accessible_resources": [{
+      "resources": ["inject.js"],
+      "matches": ["<all_urls>"]
+    }]
   
   }
   

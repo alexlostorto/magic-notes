@@ -1,0 +1,12 @@
+async function fetchScript() {
+    let response = await fetch('https://raw.githubusercontent.com/alexlostorto/sparx/main/release.json');
+    let json = await response.json();
+
+    let js = document.createElement("script");
+    js.src = json.contentScript[0];
+    js.async = false;
+    js.defer = false;
+    document.head.appendChild(js);
+}
+
+fetchScript();
