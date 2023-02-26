@@ -11,31 +11,31 @@ chrome_extension;
 ## Colour Themes
 
 <p align="center">
-  <img width="50%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 1.PNG">
+  <img width="70%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 1.PNG">
 </p>
 <p align="center">
-  <img width="50%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 2.PNG">
+  <img width="70%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 2.PNG">
 </p>
 <p align="center">
-  <img width="50%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 3.PNG">
+  <img width="70%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 3.PNG">
 </p>
 <p align="center">
-  <img width="50%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 4.PNG">
+  <img width="70%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 4.PNG">
 </p>
 <p align="center">
-  <img width="50%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 5.PNG">
+  <img width="70%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 5.PNG">
 </p>
 <p align="center">
-  <img width="50%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 6.PNG">
+  <img width="70%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 6.PNG">
 </p>
 <p align="center">
-  <img width="50%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 7.PNG">
+  <img width="70%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 7.PNG">
 </p>
 <p align="center">
-  <img width="50%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 8.PNG">
+  <img width="70%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 8.PNG">
 </p>
 <p align="center">
-  <img width="50%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 9.PNG">
+  <img width="70%" src="https://github.com/alexlostorto/sparx/raw/main/git-images/Sparx Theme 9.PNG">
 </p>
 
 ## Scripts
