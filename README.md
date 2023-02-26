@@ -8,6 +8,19 @@ console.js;
 chrome_extension;
 ```
 
+## Table of Contents
+
+<details>
+  <summary>Click to expand</summary>
+  
+- [Features](#features)
+- [Gameplay](#gameplay)
+- [Colour Themes](#colour-themes)
+- [Scripts](#scripts)
+  * [Console](#console)
+  * [Chrome Extension](#chrome-extension)
+</details>
+
 ## Features
 
 - **9** different **colour themes**
