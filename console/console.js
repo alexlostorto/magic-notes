@@ -323,7 +323,6 @@ async function main() {
                 let answers = bookworkAnswer.join(', ');
                 const textNode = document.createElement('span');
                 textNode.textContent = `Answer: ${answers}`;
-                textNode.style['margin'] = '0.3rem 1rem 0 0';
                 textNode.style['color'] = 'white';
 
                 const divNode = document.createElement('div');
@@ -331,7 +330,6 @@ async function main() {
                 divNode.style['align-items'] = 'center';
                 divNode.style['justify-content'] = 'center';
                 textNode.setAttribute('id', 'custom-answer');
-                textNode.style['height'] = '3rem';
 
                 divNode.appendChild(textNode);
                 divNode.style['margin-bottom'] = '20px';
