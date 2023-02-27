@@ -19,7 +19,7 @@
 
     "action": {
       "default_icon": {
-        "128": "Logo2.png"
+        "128": "logo.png"
       },
       "default_title": "Sparx Extension",
       "default_popup": "popup.html"
