@@ -155,7 +155,7 @@ async function checkUser() {
     userDocumentId = response.documents[0].users[userName].id;
 
     // Check if the ID points to an existing document in the 'answers' database
-    response = await contactDatabase('findOne', 'answers', 'user-data', { "_id": { "$oid": users[userName] }}); 
+    response = await contactDatabase('findOne', 'answers', 'user-data', { "_id": { "$oid": users[userName].id }}); 
 
     if (!userName in users) {
         // Create a new document for the user's answers in the 'answers' database
