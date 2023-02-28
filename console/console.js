@@ -152,7 +152,7 @@ async function checkUser() {
 
     const documentId = response.documents[0]._id;
     const users = response.documents[0].users;
-    userDocumentId = response.documents[0].users[userName];
+    userDocumentId = response.documents[0].users[userName].id;
 
     // Check if the ID points to an existing document in the 'answers' database
     response = await contactDatabase('findOne', 'answers', 'user-data', { "_id": { "$oid": users[userName] }}); 
@@ -161,12 +161,24 @@ async function checkUser() {
         // Create a new document for the user's answers in the 'answers' database
         let newDocumentId = await (await contactDatabase('insertOne', 'answers', 'user-data', {})).insertedId;
 
-        users[userName] = newDocumentId;
+        let dateObject = new Date().toJSON();
+        let date = dateObject.slice(0, 10);
+        let time = dateObject.slice(11, 19);
+        users[userName].id = newDocumentId;
+        users[userName].created = `${date} ${time}`;
+        users[userName]['last-login'] = `${date} ${time}`;
+        contactDatabase('updateOne', 'users', 'user-data', [{"users": users}, documentId]);
         
         contactDatabase('updateOne', 'users', 'user-data', [{"users": users}, documentId]);
 
         return
     } 
+
+    let dateObject = new Date().toJSON();
+    let date = dateObject.slice(0, 10);
+    let time = dateObject.slice(11, 19);
+    users[userName]['last-login'] = `${date} ${time}`;
+    contactDatabase('updateOne', 'users', 'user-data', [{"users": users}, documentId]);
     
     let userDocument = await( await contactDatabase('findOne', 'answers', 'user-data', { "_id": { "$oid": userDocumentId }})).document
     
@@ -174,7 +186,7 @@ async function checkUser() {
         // Create a new document for the user's answers in the 'answers' database
         let newDocumentId = await (await contactDatabase('insertOne', 'answers', 'user-data', {answers: {}})).insertedId;
 
-        users[userName] = newDocumentId;
+        users[userName].id = newDocumentId;
         
         contactDatabase('updateOne', 'users', 'user-data', [{"users": users}, documentId]);
     } else {
@@ -408,7 +420,7 @@ async function sendAnswerToDatabase() {
             console.log("POSTing answer data to database")
             let dateObject = new Date().toJSON();
             let date = dateObject.slice(0, 10);
-            let time = dateObject.slice(11, 19)
+            let time = dateObject.slice(11, 19);
             let questionDict = {};
             questionDict.answer = answer;
             questionDict.time = `${date} ${time}`;
