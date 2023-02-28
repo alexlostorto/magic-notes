@@ -124,8 +124,11 @@ mutationObserver.observe(document.documentElement, {
     characterDataOldValue: true
 });
 
-// DATABASE
+// USE COUNTER
+const counterURL = "https://api.countapi.xyz/hit/sparxnote/visits";
+let visits;
 
+// DATABASE
 const appName = 'data-pddjp';
 const apiKey = 'EfQF4RWfsTK3roinoSSe8p7BsOImNRWTlSP4yYoW1Q87C44m8wzlA8BUyZLWkK3K';
 const mongoDatabaseURL = `https://data.mongodb-api.com/app/${appName}/endpoint/data/v1/action/`;
@@ -137,6 +140,8 @@ let question = null;
 let answer = null;
 
 async function checkUser() {
+    visits = await(await fetch(counterURL)).json();
+
     let response = await contactDatabase('find', 'users', 'user-data'); 
 
     // Initialise the 'users' collection if it doesn't exist
