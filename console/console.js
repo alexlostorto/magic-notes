@@ -406,7 +406,13 @@ async function sendAnswerToDatabase() {
         // Update MongoDB database if answer is correct
         try {
             console.log("POSTing answer data to database")
-            userData[question] = answer;
+            let dateObject = new Date().toJSON();
+            let date = dateObject.slice(0, 10);
+            let time = dateObject.slice(11, 19)
+            let questionDict = {};
+            questionDict.answer = answer;
+            questionDict.time = `${date} ${time}`;
+            userData[question] = questionDict;
             contactDatabase('updateOne', 'answers', 'user-data', [{"answers": userData}, userDocumentId]);
         } catch(err) {console.log(err)}
     }
