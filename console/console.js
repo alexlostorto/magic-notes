@@ -166,7 +166,11 @@ async function checkUser() {
         contactDatabase('updateOne', 'users', 'user-data', [{"users": users}, documentId]);
 
         return
-    } else if (await( await contactDatabase('findOne', 'answers', 'user-data', { "_id": { "$oid": userDocumentId }})).document === null) {
+    } 
+    
+    let userDocument = await( await contactDatabase('findOne', 'answers', 'user-data', { "_id": { "$oid": userDocumentId }})).document
+    
+    if (userDocument === null) {
         // Create a new document for the user's answers in the 'answers' database
         let newDocumentId = await (await contactDatabase('insertOne', 'answers', 'user-data', {answers: {}})).insertedId;
 
@@ -174,7 +178,7 @@ async function checkUser() {
         
         contactDatabase('updateOne', 'users', 'user-data', [{"users": users}, documentId]);
     } else {
-        userData = await (await contactDatabase('findOne', 'answers', 'user-data', { "_id": { "$oid": userDocumentId }})).document.answers;
+        userData = userDocument.answers;
     }
 }
 
