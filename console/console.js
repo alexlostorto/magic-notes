@@ -133,11 +133,16 @@ const appName = 'data-pddjp';
 const apiKey = 'EfQF4RWfsTK3roinoSSe8p7BsOImNRWTlSP4yYoW1Q87C44m8wzlA8BUyZLWkK3K';
 const mongoDatabaseURL = `https://data.mongodb-api.com/app/${appName}/endpoint/data/v1/action/`;
 let authorisedToken = null;
+let tokenLife = 0;
 let userDocumentId = null;
 let userName = null;
 let userData = null;
 let question = null;
 let answer = null;
+
+function getTimestampInSeconds () {
+    return Math.floor(Date.now() / 1000)
+}
 
 async function checkUser() {
     visits = await(await fetch(counterURL)).json();
@@ -150,29 +155,29 @@ async function checkUser() {
         response = await contactDatabase('find', 'users', 'user-data'); 
     }
 
-    const documentId = response.documents[0]._id;
+    const documentId = response.documents[0]._id; 
     const users = response.documents[0].users;
-    userDocumentId = response.documents[0].users[userName].id;
 
-    // Check if the ID points to an existing document in the 'answers' database
-    response = await contactDatabase('findOne', 'answers', 'user-data', { "_id": { "$oid": users[userName].id }}); 
-
-    if (!userName in users) {
+    if (!(userName in users)) {
         // Create a new document for the user's answers in the 'answers' database
         let newDocumentId = await (await contactDatabase('insertOne', 'answers', 'user-data', {})).insertedId;
 
         let dateObject = new Date().toJSON();
         let date = dateObject.slice(0, 10);
         let time = dateObject.slice(11, 19);
+        users[userName] = {};
         users[userName].id = newDocumentId;
         users[userName].created = `${date} ${time}`;
         users[userName]['last-login'] = `${date} ${time}`;
         contactDatabase('updateOne', 'users', 'user-data', [{"users": users}, documentId]);
-        
-        contactDatabase('updateOne', 'users', 'user-data', [{"users": users}, documentId]);
 
         return
     } 
+
+    userDocumentId = users[userName].id;
+
+    // Check if the ID points to an existing document in the 'answers' database
+    response = await contactDatabase('findOne', 'answers', 'user-data', { "_id": { "$oid": users[userName].id }}); 
 
     let dateObject = new Date().toJSON();
     let date = dateObject.slice(0, 10);
@@ -195,7 +200,9 @@ async function checkUser() {
 }
 
 async function authorise() {
-    if (authorisedToken === null) {
+    timeAlive = getTimestampInSeconds() - tokenLife;
+    
+    if (timeAlive >= 1740) {
       let jsondata = {
         'key': apiKey
       }
@@ -213,7 +220,10 @@ async function authorise() {
 
       let response = await (await fetch(`https://realm.mongodb.com/api/client/v2.0/app/${appName}/auth/providers/api-key/login`, settings)).json();
       authorisedToken = response.access_token;
+
+      tokenLife = getTimestampInSeconds();
     }
+
     return authorisedToken;
 }
 
@@ -287,7 +297,7 @@ async function main() {
                 divNode.style['margin-bottom'] = '20px';
                 divNode.style['margin-top'] = '20px';
                 divNode.style.color = grey;
-                document.querySelector('.location-title').append(divNode);
+                document.querySelector('.result-inner').append(divNode);
             } else {
                 let answers = answer.join(', ');
 
@@ -648,4 +658,5 @@ main();
 
 checkUser();
 
-credits();
+credits()
+setInterval(credits, 5000);
