@@ -1,12 +1,8 @@
 {
     "manifest_version": 3,
     "name": "Sparx Extension",
-    "version": "2.0.5",
+    "version": "2.0.6",
     "description": "Stores bookwork codes and has colour themes",
-
-    "background": {
-      "service_worker": "background.js"
-    },
 
     "host_permissions": [
       "*://www.sparxmaths.uk/*",
