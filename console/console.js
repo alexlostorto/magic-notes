@@ -160,7 +160,7 @@ async function checkUser() {
 
     if (!(userName in users)) {
         // Create a new document for the user's answers in the 'answers' database
-        let newDocumentId = await (await contactDatabase('insertOne', 'answers', 'user-data', {})).insertedId;
+        let newDocumentId = await (await contactDatabase('insertOne', 'answers', 'user-data', {answers: {}})).insertedId;
 
         let dateObject = new Date().toJSON();
         let date = dateObject.slice(0, 10);
