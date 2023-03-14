@@ -28,7 +28,7 @@ chrome_extension;
 - **Stores answers** (so you don't need to write them down)
 - **Automatically** highlights the **correct** bookwork check answer
 - Works on **all** computers that allow **Inspect Element**
-- Can be used on **Android** and **iOS** (through Kiwi Browser)
+- Can be used on **Android** (through Kiwi Browser)
 
 ## Gameplay
 
