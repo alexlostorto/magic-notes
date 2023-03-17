@@ -1,6 +1,6 @@
 <h1 align="center">Sparx</h1>
 
-This repository includes 2 programs to make learning on Sparx easier.
+Welcome to **Sparx Notes**, an extension designed to assist you with your maths homework. Please read the **terms and conditions** [**here**](T&C.txt) before using the extension.
 
 ```js
 // List of programs
