@@ -78,18 +78,18 @@ async function fetchDependencies() {
     let json = await response.json();
 
     for (url of json.dependencies.js) {
-      let js = document.createElement("script");
-      js.src = url;
-      js.async = false;
-      js.defer = false;
-      document.head.appendChild(js);
+        let js = document.createElement("script");
+        js.src = url;
+        js.async = false;
+        js.defer = false;
+        document.head.appendChild(js);
     }
 
     for (url of json.dependencies.css) {
-      let link = document.createElement("link");
-      link.href = url;
-      link.rel = "stylesheet"
-      document.head.appendChild(link);
+        let link = document.createElement("link");
+        link.href = url;
+        link.rel = "stylesheet"
+        document.head.appendChild(link);
     }
 }
 
@@ -203,25 +203,25 @@ async function authorise() {
     timeAlive = getTimestampInSeconds() - tokenLife;
     
     if (timeAlive >= 1740) {
-      let jsondata = {
-        'key': apiKey
-      }
+        let jsondata = {
+            'key': apiKey
+        }
 
-      let settings = {
-        "async": true,
-        "crossDomain": true,
-        "method": "POST",
-        "headers": {
-          'Content-Type': 'application/json'
-        },
-        'processData': false,
-        body: JSON.stringify(jsondata)
-      }
+        let settings = {
+            "async": true,
+            "crossDomain": true,
+            "method": "POST",
+            "headers": {
+                'Content-Type': 'application/json'
+            },
+            'processData': false,
+            body: JSON.stringify(jsondata)
+        }
 
-      let response = await (await fetch(`https://realm.mongodb.com/api/client/v2.0/app/${appName}/auth/providers/api-key/login`, settings)).json();
-      authorisedToken = response.access_token;
+        let response = await (await fetch(`https://realm.mongodb.com/api/client/v2.0/app/${appName}/auth/providers/api-key/login`, settings)).json();
+        authorisedToken = response.access_token;
 
-      tokenLife = getTimestampInSeconds();
+        tokenLife = getTimestampInSeconds();
     }
 
     return authorisedToken;
@@ -485,9 +485,9 @@ document.addEventListener("keypress", function(event) {
 Array.prototype.unique = function() {
     var arr = [];
     for (var i = 0; i < this.length; i++) {
-      if (!arr.includes(this[i]) && isDigit(this[i])) {
-        arr.push(this[i]);
-      }
+        if (!arr.includes(this[i]) && isDigit(this[i])) {
+            arr.push(this[i]);
+        }
     }
     return arr;
 }
