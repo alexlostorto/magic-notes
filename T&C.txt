@@ -22,13 +22,14 @@ offer any purchases or additional
 services. All features are available
 for free.
 
-Login and Answer Data: Sparx Notes
+Privacy Policy: Sparx Notes
 collects login and answer data from
 each user. This data is used to improve
 the accuracy of the extension and to
 provide you with a better experience.
 We take the privacy of our users very
-seriously and will not share any
+seriously and all confidential information 
+is encrypted. We will not share any
 personal information with third
 parties.
 
