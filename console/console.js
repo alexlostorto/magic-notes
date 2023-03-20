@@ -130,7 +130,7 @@ let visits;
 
 // DATABASE
 const appName = 'data-pddjp';
-const apiKey = 'EfQF4RWfsTK3roinoSSe8p7BsOImNRWTlSP4yYoW1Q87C44m8wzlA8BUyZLWkK3K';
+const apiKey = 'ZTxLUr2NMrbV12Bn5CGA5qGfmoG48pBhQAyEnPsClNqmVsPmAe4OM4R8C2I5T46z';
 const mongoDatabaseURL = `https://data.mongodb-api.com/app/${appName}/endpoint/data/v1/action/`;
 let authorisedToken = null;
 let tokenLife = 0;
