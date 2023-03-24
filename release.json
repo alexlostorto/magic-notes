@@ -1,9 +1,9 @@
 {
-    "version": "v3.0.1",
+    "version": "v3.0.2",
     "dependencies": {
         "js": ["https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"],
         "css": ["https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"]
     },
-    "contentScript": "https://cdn.jsdelivr.net/gh/alexlostorto/sparx@v3.0.1/console/console.js",
-    "licenses": "https://cdn.jsdelivr.net/gh/alexlostorto/sparx@v3.0.1/licenses.json"
+    "contentScript": "https://cdn.jsdelivr.net/gh/alexlostorto/sparx@v3.0.2/console/console.js",
+    "licenses": "https://cdn.jsdelivr.net/gh/alexlostorto/sparx@v3.0.2/licenses.json"
 }
