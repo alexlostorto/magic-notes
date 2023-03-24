@@ -100,10 +100,20 @@ document.head.insertAdjacentHTML('beforeend','<style>' + themeStyles + '</style>
 document.head.insertAdjacentHTML('beforeend','<style>' + darkModeStyles + '</style>');
 
 // Colour palette 
-document.documentElement.style.setProperty('--darkest', themes[3]['darkest']);
-document.documentElement.style.setProperty('--dark', themes[3]['dark']);
-document.documentElement.style.setProperty('--light', themes[3]['light']);
-document.documentElement.style.setProperty('--lightest', themes[3]['lightest']);
+colours = getLocalStorage('colour-theme');
+
+if (colours == null) {
+    document.documentElement.style.setProperty('--darkest', themes[3]['darkest']);
+    document.documentElement.style.setProperty('--dark', themes[3]['dark']);
+    document.documentElement.style.setProperty('--light', themes[3]['light']);
+    document.documentElement.style.setProperty('--lightest', themes[3]['lightest']);
+} else {
+    console.log(colours)
+    document.documentElement.style.setProperty('--darkest', themes[colours.theme]['darkest']);
+    document.documentElement.style.setProperty('--dark', themes[colours.theme]['dark']);
+    document.documentElement.style.setProperty('--light', themes[colours.theme]['light']);
+    document.documentElement.style.setProperty('--lightest', themes[colours.theme]['lightest']);
+}
 
 const grey = '#f8f8f7';
 const orange = '#f46815';
@@ -111,7 +121,7 @@ const orange = '#f46815';
 console.log(JSON.parse(localStorage.getItem('sparx-data')));
 
 const mutationObserver = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
+    mutations.forEach(function() {
         main();
     });
 });
@@ -445,7 +455,7 @@ async function main() {
     if (questionContainer !== null) {
         question = questionContainer.innerText;
         questionImages = document.querySelectorAll('[data-test-target="image-img"]');
-        console.log(questionImages);
+        // console.log(questionImages);
 
         if (questionImages.length == 0 | questionImages[0]) { return }
         else {
@@ -485,6 +495,7 @@ async function sendAnswerToDatabase() {
 }
 
 document.addEventListener("click", function(e) {
+    console.log(e.target);
     if(e.target) {
         try {
             if (
@@ -493,13 +504,15 @@ document.addEventListener("click", function(e) {
                 (e.target.className == "button-icon button-icon-right" && e.target.parentElement.innerText == "Submit") ||
                 (e.target.parentElement.className == "button-icon button-icon-right" && e.target.parentElement.parentElement.innerText == "Submit") ||
                 (e.target.parentElement.parentElement.className == "button-icon button-icon-right" && e.target.parentElement.parentElement.parentElement.innerText == "Submit")) {
+
+                console.log("---PROCESSING ANSWER---");
     
                 const bookworkCodeElement = document.querySelector('.bookwork-code');
                 let bookworkCode = bookworkCodeElement.textContent;
                 bookworkCode = bookworkCode.replace("Bookwork code: ", '');
     
                 answer = getInput(bookworkCode);
-                updateDatabase(bookworkCode, answer);
+                updateLocalStorage('sparx-data', bookworkCode, answer);
 
                 sendAnswerToDatabase();
             }
@@ -511,12 +524,14 @@ document.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         const submitButton = document.querySelector('#skill-delivery-submit-button');
         if (submitButton !== null) {
+            console.log("---PROCESSING ANSWER---");
+
             const bookworkCodeElement = document.querySelector('.bookwork-code');
             let bookworkCode = bookworkCodeElement.textContent;
             bookworkCode = bookworkCode.replace("Bookwork code: ", '');
 
             answer = getInput(bookworkCode);
-            updateDatabase(bookworkCode, answer);
+            updateLocalStorage('sparx-data', bookworkCode, answer);
 
             sendAnswerToDatabase();
         }
@@ -540,20 +555,30 @@ function isDigit(c) {
     return c >= '0' && c <= '9';
 }
 
-function updateDatabase(bookworkCode, answer) {
+function getLocalStorage(itemName) {
+    if (localStorage.getItem(itemName) === null) {
+        return null
+    } else {
+        return JSON.parse(localStorage.getItem(itemName));
+    }
+}
+
+function updateLocalStorage(itemName, key, newValue) {
     console.log("Updating database");
 
-    if (localStorage.getItem('sparx-data') === null) {
+    if (localStorage.getItem(itemName) === null) {
         const defaultJSON = {"Placeholder": 0};
-        localStorage.setItem('sparx-data', JSON.stringify(defaultJSON));
+        localStorage.setItem(itemName, JSON.stringify(defaultJSON));
     }
 
-    let sparxData = JSON.parse(localStorage.getItem('sparx-data'));
-    sparxData[bookworkCode] = answer;
+    let item = JSON.parse(localStorage.getItem(itemName));
+    item[key] = newValue;
 
-    console.log("New value: ", sparxData);
+    console.log("New value: ", item);
 
-    localStorage.setItem('sparx-data', JSON.stringify(sparxData));
+    console.log(key, newValue);
+
+    localStorage.setItem(itemName, JSON.stringify(item));
 
     console.log("Database updated");
 }
@@ -581,7 +606,7 @@ function showThemes() {
     textNode.innerText = 'Themes';
     themesContainer.setAttribute('class', 'themes-container');
 
-    for (const [_, theme] of Object.entries(themes)) {
+    for (const [index, theme] of Object.entries(themes)) {
         let themeNode = document.createElement('li');
         for (const [_, colour] of Object.entries(theme)) {
             let colourNode = document.createElement('div');
@@ -589,7 +614,8 @@ function showThemes() {
             themeNode.appendChild(colourNode);
         };
         themeNode.addEventListener('click', function() {
-            console.log("You clicked a theme");
+            console.log(`You clicked theme ${index}`);
+            updateLocalStorage('colour-theme', 'theme', index)
             document.documentElement.style.setProperty('--darkest', theme['darkest']);
             document.documentElement.style.setProperty('--dark', theme['dark']);
             document.documentElement.style.setProperty('--light', theme['light']);
@@ -664,7 +690,6 @@ function getInput() {
                 fractionText.indexOf("{"), 
                 fractionText.lastIndexOf("}") + 1
             );
-            console.log(fractionSubstring);
             innerFraction.push(fractionSubstring);
         }
         fraction = `\\frac${innerFraction[0]}${innerFraction[1]}`;
