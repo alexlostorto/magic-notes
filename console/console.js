@@ -108,7 +108,6 @@ if (colours == null) {
     document.documentElement.style.setProperty('--light', themes[3]['light']);
     document.documentElement.style.setProperty('--lightest', themes[3]['lightest']);
 } else {
-    console.log(colours)
     document.documentElement.style.setProperty('--darkest', themes[colours.theme]['darkest']);
     document.documentElement.style.setProperty('--dark', themes[colours.theme]['dark']);
     document.documentElement.style.setProperty('--light', themes[colours.theme]['light']);
