@@ -27,6 +27,7 @@ chrome_extension;
 - **9** different **colour themes**
 - **Stores answers** (so you don't need to write them down)
 - **Automatically** highlights the **correct** bookwork check answer
+- **Automatically** selects next task when pressing **Enter**
 - Works on **all** computers that allow **Inspect Element**
 - Can be used on **Android** (through Kiwi Browser)
 
