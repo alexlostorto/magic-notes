@@ -4,6 +4,8 @@ Welcome to **Magic Notes**, an extension designed to make learning on Sparx Math
 
 When I first started using Sparx Maths, I thoroughly enjoyed the variety of question styles that were offered and the automatic level system which allowed each individual to learn at their own pace. This is why I created this program in the hopes of motivating students to use Sparx Maths and in turn, develop an innate passion for learning Maths on their website.
 
+Click [**here**](https://alexlostorto.github.io/magic-notes/) to visit the **Magic Notes** website and copy the code.
+
 `THIS PROGRAM HAS NO CONNECTION WITH SPARX MATHS. SPARX MATHS IS OWNED BY SPARX LTD.`
 
 ```js
