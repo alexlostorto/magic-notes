@@ -1,0 +1,42 @@
+{
+    "manifest_version": 3,
+    "name": "Magic Notes",
+    "version": "3.1.0",
+    "description": "Stores bookwork codes and has colour themes",
+
+    "host_permissions": [
+      "*://www.sparxmaths.uk/*",
+      "https://auth.sparxmaths.uk/*"
+    ],
+  
+    "icons": {
+      "128": "logo.png"
+    },
+
+    "action": {
+      "default_icon": {
+        "128": "logo.png"
+      },
+      "default_title": "Sparx Extension"
+    },
+    
+    "permissions": [
+      "activeTab",
+      "storage",
+      "downloads"
+    ],
+
+    "content_scripts": [
+      {
+        "matches": ["*://www.sparxmaths.uk/*", "https://auth.sparxmaths.uk/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+
+    "web_accessible_resources": [{
+      "resources": ["inject.js"],
+      "matches": ["<all_urls>"]
+    }]
+  
+  }
+  
