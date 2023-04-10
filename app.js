@@ -1,4 +1,9 @@
 // DOM ELEMENTS
+const headerText = document.querySelector('.header-text');
+const headerDescription = document.querySelector('.header-description');
+const headerArrow = document.querySelector('.arrow');
+
+const copyButton = document.querySelector('#copy-button');
 const toggleButton = document.querySelector('.toggle-button');
 const resourcesButton = document.querySelector('.resources-button');
 const recourcesLinks = document.querySelector('.nav-resources');
@@ -12,6 +17,24 @@ const cursorOuter = document.querySelector('.custom-cursor.outer');
 const sleep = ms => {
     return new Promise(resolve => setTimeout(resolve, ms))
 }
+
+
+// COPY BUTTON
+const SCRIPT =  `s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/alexlostorto/magic-notes@v3.0.0/console/inject.js';document.head.appendChild(s);`;
+
+copyButton.addEventListener('click', async () => {
+    navigator.clipboard.writeText(SCRIPT).then(async function() {
+        console.log('Copying to clipboard was successful!');
+        copyButton.textContent = 'Copied!';
+        await sleep(1000);
+        copyButton.textContent = 'Copy';
+    }, async function(err) {
+        copyButton.textContent = 'Failed to copy';
+        await sleep(1000);
+        copyButton.textContent = 'Copy';
+        console.error('Could not copy text: ', err);
+    });
+})
 
 
 // WEBSITE VIEWS
@@ -48,22 +71,14 @@ faders.forEach(fader => {
     appearOnScroll.observe(fader);
 })
 
-
-// TYPEWRITER 
-let speed = 100;
-async function typewrite(element) {
-    let text = element.innerHTML;
-    element.innerHTML = '';
-    element.style.visibility = 'visible';
-
-    for (let i = 0; i < text.length; i++) {
-        await sleep(speed);
-        element.innerHTML += text.charAt(i);
-    }
-
-    element.style['border-right'] = '0px';
+async function fadeIn(element, delay) {
+    await sleep(delay);
+    element.classList.toggle('appear');
 }
 
+fadeIn(headerText, 1000);
+fadeIn(headerDescription, 1500);
+fadeIn(headerArrow, 2000);
 
 // Check if mobile or desktop 
 let isDesktop = false;
