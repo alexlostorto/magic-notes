@@ -608,7 +608,7 @@ background: var(--dark);
         align-items: center;
         flex-direction: column;
         margin-right: 0px;
-        padding: 5px 0 20px 0;
+        padding: 5px 0 5px 0;
     }
 
     .navbar-items ul {
@@ -627,6 +627,7 @@ background: var(--dark);
 
     .navbar-items.active {
         display: flex;
+        padding: 5px 0 5px 0;
     }
 
     .navbar-items li {
@@ -676,7 +677,7 @@ background: var(--dark);
     }
 
     .navbar-items li a:hover {
-        color: var(--white);
+        color: orange;
     }
     
     .nav-resources.active {
@@ -684,6 +685,7 @@ background: var(--dark);
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-bottom: 15px;
     }
 
     .subcategory-button.active .nav-subcategory {
@@ -716,11 +718,11 @@ background: var(--dark);
 
 @media (max-width: 500px) {
     .header {
-        padding: 3vh 1rem;
+        padding: 3vh 0;
     }
 
     .header-text {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     .header-description {
