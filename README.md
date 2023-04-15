@@ -6,7 +6,7 @@ When I first started using Sparx Maths, I thoroughly enjoyed the variety of ques
 
 Click [**here**](https://alexlostorto.github.io/magic-notes/) to visit the **Magic Notes** website and copy the code.
 
-`THIS PROGRAM HAS NO CONNECTION WITH SPARX MATHS. SPARX MATHS IS OWNED BY SPARX LTD.`
+> **Note** This program has no connection with Sparx Maths. Sparx Maths is owned by Sparx LTD.
 
 ```js
 // List of programs
@@ -14,21 +14,31 @@ console.js;
 chrome_extension;
 ```
 
-## Table of Contents
+## 📔 Table of Contents
 
 <details>
   <summary>Click to expand</summary>
   
-- [Features](#features)
-- [Gameplay](#gameplay)
-- [Colour Themes](#colour-themes)
+- [Quick setup](#-quick-setup)
+- [Features](#-features)
+- [Gameplay](#-gameplay)
+- [Colour Themes](#-colour-themes)
 - [Scripts](#scripts)
   * [Console](#console)
   * [Chrome Extension](#chrome-extension)
 - [Terms and Conditions](#terms-and-conditions)
 </details>
 
-## Features
+## ⚡ Quick setup
+
+1. Visit [**Magic Notes**](https://alexlostorto.github.io/magic-notes/) and scroll down to click the _Copy_ button.
+2. Log in to Sparx Maths and open the **Developers Console** with _Ctrl + Shift + J_
+3. Paste the code in the Console and press _Enter_.
+4. Star the repo 😄
+
+> **Note** This is the temporary version of the program, download the Chrome Extension to use it permanently.
+
+## ✨ Features
 
 - **9** different **colour themes**
 - **Stores answers** (so you don't need to write them down)
@@ -37,7 +47,7 @@ chrome_extension;
 - Works on **all** computers that allow **Inspect Element**
 - Can be used on **Android** (through Kiwi Browser)
 
-## Gameplay
+## 🎬 Gameplay
 
 <p align="center">
   <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/.github/Sparx Home Page.PNG">
@@ -46,7 +56,7 @@ chrome_extension;
   <img width="70%" src="https://github.com/alexlostorto/sparx/raw/main/.github/Sparx Bookwork Code 6.PNG">
 </p>
 
-## Colour Themes
+## 🖌 Colour Themes
 
 <p align='center'>
   <img width="49%" src="https://github.com/alexlostorto/sparx/raw/main/.github/Sparx Theme 1.PNG">
