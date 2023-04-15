@@ -6,7 +6,7 @@ You can choose a colour theme by clicking it.
 
 |   Theme   |                                   Preview                                   |
 | :-------: | :-------------------------------------------------------------------------: |
-| `default` | ![image](https://github.com/alexlostorto/sparx/raw/main/.github/theme1.png) |
+|  `stone`  | ![image](https://github.com/alexlostorto/sparx/raw/main/.github/theme1.png) |
 | `boulder` | ![image](https://github.com/alexlostorto/sparx/raw/main/.github/theme2.png) |
 |  `angel`  | ![image](https://github.com/alexlostorto/sparx/raw/main/.github/theme3.png) |
 | `purple`  | ![image](https://github.com/alexlostorto/sparx/raw/main/.github/theme4.png) |
