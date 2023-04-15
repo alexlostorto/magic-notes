@@ -23,10 +23,7 @@ chrome_extension;
 - [Features](#-features)
 - [Gameplay](#-gameplay)
 - [Colour Themes](#-colour-themes)
-- [Scripts](#scripts)
-  * [Console](#console)
-  * [Chrome Extension](#chrome-extension)
-- [Terms and Conditions](#terms-and-conditions)
+- [Terms and Conditions](#%EF%B8%8F-terms-and-conditions)
 </details>
 
 ## ⚡ Quick setup
@@ -50,45 +47,22 @@ chrome_extension;
 ## 🎬 Gameplay
 
 <p align="center">
-  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/.github/Sparx Home Page.PNG">
+  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/.github/home-page.png">
 </p>
 <p align="center">
-  <img width="70%" src="https://github.com/alexlostorto/sparx/raw/main/.github/Sparx Bookwork Code 6.PNG">
+  <img width="70%" src="https://github.com/alexlostorto/sparx/raw/main/.github/bookwork-code.png">
 </p>
 
 ## 🖌 Colour Themes
 
-<p align='center'>
-  <img width="49%" src="https://github.com/alexlostorto/sparx/raw/main/.github/Sparx Theme 1.PNG">
-  <img width="49%" src="https://github.com/alexlostorto/sparx/raw/main/.github/Sparx Theme 2.PNG">
-</p>
-<p align='center'>
-  <img width="49%" src="https://github.com/alexlostorto/sparx/raw/main/.github/Sparx Theme 3.PNG">
-  <img width="49%" src="https://github.com/alexlostorto/sparx/raw/main/.github/Sparx Theme 4.PNG">
-</p>
-<p align='center'>
-  <img width="49%" src="https://github.com/alexlostorto/sparx/raw/main/.github/Sparx Theme 5.PNG">
-  <img width="49%" src="https://github.com/alexlostorto/sparx/raw/main/.github/Sparx Theme 6.PNG">
-</p>
-<p align='center'>
-  <img width="49%" src="https://github.com/alexlostorto/sparx/raw/main/.github/Sparx Theme 7.PNG">
-  <img width="49%" src="https://github.com/alexlostorto/sparx/raw/main/.github/Sparx Theme 8.PNG">
-</p>
-<p align='center'>
-  <img width="49%" src="https://github.com/alexlostorto/sparx/raw/main/.github/Sparx Theme 9.PNG">
-</p>
+|    Theme     |                                    Preview                                    |
+| :----------: | :---------------------------------------------------------------------------: |
+|   `stone`    |  ![stone](https://github.com/alexlostorto/sparx/raw/main/.github/theme1.png)  |
+|  `boulder`   | ![boulder](https://github.com/alexlostorto/sparx/raw/main/.github/theme2.png) |
+|   `angel`    |  ![angel](https://github.com/alexlostorto/sparx/raw/main/.github/theme3.png)  |
+| More themes! |         **🎨 [See a list of all available themes](./docs/themes.md)**         |
 
-## Scripts
-
-#### Console
-
-1. This script works in the console.
-
-#### Chrome extension
-
-1. An unpacked Chrome extension which utilises chrome's storage API to hold sparx data.
-
-## Terms and Conditions
+## ⚖️ Terms and Conditions
 
 All code in this repository was developed by Alex lo Storto except where otherwise noted. Copyright (c) 2023, Alex lo Storto. All rights reserved. The code is licensed under the MIT license.
 
