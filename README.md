@@ -33,7 +33,7 @@ chrome_extension;
 3. Paste the code in the Console and press _Enter_.
 4. Star the repo 😄
 
-> **Note** This is the temporary version of the program, download the [Chrome Extension](docs/install.md) to use it permanently.
+> **Note** This is the temporary version of the program, download the Chrome Extension [here](https://alexlostorto.github.io/magic-notes/install/index.html) to use it permanently.
 
 ## ✨ Features
 
@@ -61,6 +61,22 @@ chrome_extension;
 |  `boulder`   | ![boulder](https://github.com/alexlostorto/sparx/raw/main/.github/theme2.png) |
 |   `angel`    |  ![angel](https://github.com/alexlostorto/sparx/raw/main/.github/theme3.png)  |
 | More themes! |         **🎨 [See a list of all available themes](./docs/themes.md)**         |
+
+## 🙋 FAQ
+
+#### Q. Do I have to copy and paste the code every time?
+
+A. If you want the program to stay permanently instead of manually injecting it, install it [here](https://alexlostorto.github.io/magic-notes/install/index.html).
+
+#### Q. Why is more than one answer highlighted?
+
+A. Unfortunately, the answer detection system isn't perfect. The answer is displayed above the bookwork check so you can use your judgement to make an appropriate decision.
+
+#### Q. Can I suggest a colour theme?
+
+A. Yes of course! If you have a colour theme that isn't already in the [available themes](./docs/themes.md) then send me an email or create an Issue [here](https://github.com/alexlostorto/magic-notes/issues/new)
+
+> **Note** Colour themes have 4 different colours: lightest, light, dark, darkest. Colours will look different when used on the Sparx Maths website.
 
 ## ⚖️ Terms and Conditions
 
