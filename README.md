@@ -33,7 +33,7 @@ chrome_extension;
 3. Paste the code in the Console and press _Enter_.
 4. Star the repo 😄
 
-> **Note** This is the temporary version of the program, download the [Chrome Extension](docs/install.md) to use it permanently.
+> **Note** This is the temporary version of the program, download the Chrome Extension [here](https://alexlostorto.github.io/magic-notes/install/index.html) to use it permanently.
 
 ## ✨ Features
 
