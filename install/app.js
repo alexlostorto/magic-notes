@@ -76,7 +76,7 @@ async function fadeIn(element, delay) {
     element.classList.toggle('appear');
 }
 
-fadeIn(headerText, 5000);
+fadeIn(headerText, 800);
 fadeIn(headerDescription, 1000);
 fadeIn(instructions, 1300);
 
