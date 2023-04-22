@@ -1,3 +1,6 @@
+console.clear();
+credits();
+
 const headerText = document.querySelector('.header-text');
 const headerDescription = document.querySelector('.header-description');
 const instructions = document.querySelector('.slide article');
