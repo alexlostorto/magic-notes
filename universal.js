@@ -204,7 +204,7 @@ TABLE OF CONTENTS
     let isMobile = (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i));
     let coarsePointer = window.matchMedia("(any-pointer:coarse)").matches;
     
-    if (orientationLandscape || (!isMobile) || coarsePointer) { enableCustomCursor(); }
+    if (orientationLandscape || (!isMobile) || coarsePointer) { toggleCustomCursor(true); }
     
     window.addEventListener("touchstart", detectTouch);
     
@@ -225,21 +225,16 @@ TABLE OF CONTENTS
     
     function detectTouch() {  // If a touch is detected, make sure the custom cursor is disabled 
         console.log("isMobile");
-        disableCustomCursor();
+        toggleCustomCursor(false);
         window.removeEventListener("touchstart", detectTouch);
         window.removeEventListener("mousemove", customCursorListener);
     }
     
-    function enableCustomCursor() {
-        cursor.style.display = 'block';
-        cursorInner.style.display = 'block';
-        cursorOuter.style.display = 'block';
-    }
-    
-    function disableCustomCursor() {
-        cursor.style.display = 'none';
-        cursorInner.style.display = 'none';
-        cursorOuter.style.display = 'none';
+    function toggleCustomCursor(enable=true) {
+        if (enable) {display = 'block'} else {display = 'none'}
+        cursor.style.display = display;
+        cursorInner.style.display = display;
+        cursorOuter.style.display = display;
     }
     
     function toggleCursorHover(event) {

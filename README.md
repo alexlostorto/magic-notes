@@ -4,6 +4,8 @@
   <b>An extension designed to make learning on Sparx Maths more fun!</b>
 </p>
 
+[![Maintainability](https://img.shields.io/codeclimate/maintainability/alexlostorto/magic-notes?style=for-the-badge&message=Code+Climate&labelColor=222222&logo=Code+Climate&logoColor=FFFFFF)](https://codeclimate.com/github/alexlostorto/magic-notes/maintainability)
+
 Welcome to **Magic Notes**! Please read the **terms and conditions** [**here**](T&C.txt) before using the extension.
 
 When I first started using Sparx Maths, I thoroughly enjoyed the variety of question styles that were offered and the automatic level system which allowed each individual to learn at their own pace. This is why I created this program in the hopes of motivating students to use Sparx Maths and in turn, develop an innate passion for learning Maths on their website.
