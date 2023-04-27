@@ -30,6 +30,7 @@ Click [**here**](https://alexlostorto.github.io/magic-notes/) to visit the **Mag
 - [Features](#-features)
 - [Gameplay](#-gameplay)
 - [Colour Themes](#-colour-themes)
+- [FAQ](#-faq)
 - [Terms and Conditions](#%EF%B8%8F-terms-and-conditions)
 </details>
 
