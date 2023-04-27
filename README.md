@@ -14,10 +14,11 @@ Click [**here**](https://alexlostorto.github.io/magic-notes/) to visit the **Mag
 
 > **Note** This program has no connection with Sparx Maths. Sparx Maths is owned by Sparx LTD.
 
-```js
-// List of programs
-console.js;
-chrome_extension;
+```python
+# List of programs
+1. console.js
+2. chrome_extension
+3. statistics.py
 ```
 
 ## 📔 Table of Contents
