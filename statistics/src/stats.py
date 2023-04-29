@@ -15,7 +15,7 @@ def getStatistics():
 
 def returnCreationCount(accountCreations):
     earliestDate = datetime.strptime(accountCreations[0], "%Y-%m-%d")
-    latestDate = datetime.strptime(accountCreations[-1], "%Y-%m-%d")
+    latestDate = datetime.now()
     dates = getDatesInRange(earliestDate, latestDate)
 
     creationStatistics = []
@@ -27,7 +27,13 @@ def returnCreationCount(accountCreations):
             creationStatistics.append([date, 1])
 
     for i in range(len(dates)):
-        if dates[i] != creationStatistics[i][0]:
+        try:
+            date = creationStatistics[i][0]
+        except:
+            creationStatistics.insert(i, [dates[i], 0])
+            continue
+
+        if dates[i] != date:
             creationStatistics.insert(i, [dates[i], 0])
 
     return creationStatistics
