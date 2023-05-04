@@ -13,8 +13,8 @@ help you with your maths homework, but
 not as a means of cheating.
 
 No Affiliation with Sparx: Magic Notes
-is not affiliated with Sparx Maths or 
-Sparx LTD or any other educational 
+is not affiliated with Sparx Maths or
+Sparx LTD or any other educational
 institution or organization.
 
 No Purchases: Magic Notes does not
@@ -22,16 +22,17 @@ offer any purchases or additional
 services. All features are available
 for free.
 
-Privacy Policy: Magic Notes
-collects login and answer data from
-each user. This data is used to improve
-the accuracy of the extension and to
-provide you with a better experience.
-We take the privacy of our users very
-seriously and all confidential information 
-is encrypted. We will not share any
-personal information with third
-parties.
+Privacy Policy: Magic Notes collects
+data from each user. The data collected
+includes account creation dates, login
+times and answer data. This information
+is used to improve the accuracy of the
+extension and to provide you with a
+better experience. We take the privacy
+of our users very seriously and all
+confidential information is encrypted.
+We will not share any personal
+information with third parties.
 
 No Liability: We do not guarantee the
 accuracy of the answers provided by
@@ -44,8 +45,7 @@ Magic Notes to cheat or engage in any
 other illegal or unethical conduct. We
 reserve the right to terminate your use
 of the extension if we suspect that you
-are engaging in any prohibited
-conduct.
+are engaging in any prohibited conduct.
 
 Modification and Termination: We
 reserve the right to modify or
