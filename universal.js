@@ -69,12 +69,16 @@ TABLE OF CONTENTS
         ------------------------------------------------------------*/
     
     async function liveViews() {
-        let response = await(await (fetch("https://api.countapi.xyz/hit/alexlostorto.github.io/magic-note"))).json();
-        visitsCounter = document.getElementById('visits');
-    
-        if (visitsCounter !== null) {
-            visitsCounter.innerText = response.value + " 👀";
-        } else { return }
+        try {
+            let response = await(await (fetch("https://api.countapi.xyz/hit/alexlostorto.github.io/magic-note"))).json();
+            visitsCounter = document.getElementById('visits');
+        
+            if (visitsCounter !== null) {
+                visitsCounter.innerText = response.value + " 👀";
+            } else { return }
+        } catch(err) {
+            console.log(err)
+        }
     }
     
     liveViews()
