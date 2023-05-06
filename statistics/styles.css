@@ -1,0 +1,28 @@
+.slide {
+    padding-top: 5vh;
+    height: 100vh;
+}
+
+#statistics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7rem;
+    border: 3px solid var(--darkest);
+}
+
+#statistics > div,
+#statistics > span {
+    padding: 0.5rem 2rem;
+}
+
+#statistics > span {
+    width: 100%;
+    text-align: center;
+    border-bottom: 3px solid var(--darkest);
+}
+
+#statistics div span {
+    border-left: 3px solid var(--darkest);
+}
