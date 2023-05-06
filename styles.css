@@ -108,12 +108,12 @@ li {
 
 .fade-in.appear {
     opacity: 1;
-    animation: fadeIn 3s;
+    animation: fadeIn 1.5s;
 }
 
 .fade.appear {
     opacity: 1;
-    animation: fadeIn 3s;
+    animation: fadeIn 1.5s;
 }
 
 .from-bottom {
