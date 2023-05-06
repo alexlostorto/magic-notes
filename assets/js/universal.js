@@ -7,9 +7,8 @@ TABLE OF CONTENTS
     2.1 ESSENTIAL
     2.2 VIEW COUNTER
     2.3 FADERS
-    2.4 TYPEWRITER
-    2.5 CREDITS
-    2.6 COPY BUTTON
+    2.4 CREDITS
+    2.5 COPY BUTTON
 3.0 NAVIGATION
     3.1 HAMBURGER FUNCTIONALITY
 4.0 CUSTOM CURSOR
@@ -117,27 +116,7 @@ TABLE OF CONTENTS
     
         /*------------------------------------------------------------
         |
-        | 2.4 TYPEWRITER
-        |
-        ------------------------------------------------------------*/
-    
-    let speed = 100;
-    async function typewrite(element) {
-        let text = element.innerHTML;
-        element.innerHTML = '';
-        element.style.visibility = 'visible';
-    
-        for (let i = 0; i < text.length; i++) {
-            await sleep(speed);
-            element.innerHTML += text.charAt(i);
-        }
-    
-        element.style['border-right'] = '0px';
-    }
-    
-        /*------------------------------------------------------------
-        |
-        | 2.5 CREDITS
+        | 2.4 CREDITS
         |
         ------------------------------------------------------------*/
     
@@ -148,7 +127,7 @@ TABLE OF CONTENTS
     
         /*------------------------------------------------------------
         |
-        | 2.6 COPY BUTTON
+        | 2.5 COPY BUTTON
         |
         ------------------------------------------------------------*/
     
