@@ -1,11 +1,15 @@
 from src.stats import getStatistics
 from src.tables import createTable
+from src.graph import createGraph
 
 
 def main():
-    statistics = createTable('Statistics', getStatistics())
+    statistics = getStatistics()
+    table = createTable('Statistics', statistics)
+    graph = createGraph(statistics)
 
-    statistics.display()
+    # graph.display()
+    table.display()
 
 
 if __name__ == '__main__':
