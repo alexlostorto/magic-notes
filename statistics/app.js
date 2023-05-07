@@ -1,27 +1,53 @@
-console.clear();
+// console.clear();
 credits();
 
 const headerText = document.querySelector('.header-text');
 const headerDescription = document.querySelector('.header-description');
 const instructions = document.querySelector('.slide article');
-const downloadButton = document.querySelector('#download-button');
+const fetchButton = document.querySelector('#fetch-button');
+const statsTable = document.querySelector('#statistics');
 
 fadeIn(headerText, 500);
 fadeIn(headerDescription, 800);
-fadeIn(instructions, 1000);
 
-function download(uri, name) {
-    var link = document.createElement("a");
-    link.setAttribute('download', name);
-    link.href = uri;
-    document.body.appendChild(link);
-    link.click(); 
-    link.remove();
+fetchButton.addEventListener('click', async () => {
+    fetchButton.textContent = 'Fetching...';
+
+    try {
+        await updateStatstics();
+        fetchButton.textContent = 'Fetch';
+        statsTable.classList.add('show');
+    } catch(err) {
+        fetchButton.textContent = 'Failed to fetch';
+        await sleep(1000);
+        fetchButton.textContent = 'Fetch';
+        console.error('Could not copy: ', err);
+    }
+});
+
+async function updateStatstics() {
+    statsTable.classList.remove('show');
+    statsTable.innerHTML = '';
+    let statistics = await getStatistics();
+
+    let header = document.createElement('span');
+    header.textContent = 'Statistics';
+    statsTable.appendChild(header);
+
+    let table = document.createElement('table');
+    statsTable.appendChild(table);
+
+    for (let i = 0; i < statistics.length; i++) {
+        let tableRow = document.createElement('tr');
+        
+        let date = document.createElement('td');
+        date.textContent = statistics[i][0];
+
+        let count = document.createElement('td');
+        count.textContent = statistics[i][1];
+
+        tableRow.appendChild(date);
+        tableRow.appendChild(count);
+        table.appendChild(tableRow);
+    }
 }
-
-downloadButton.addEventListener('click', async () => {
-    download('documents/magic-notes.zip', 'Magic Notes');
-    downloadButton.textContent = 'Downloaded!';
-    await sleep(1000);
-    downloadButton.textContent = 'Download ZIP';
-})
