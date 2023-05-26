@@ -187,13 +187,20 @@ TABLE OF CONTENTS
     let isMobile = (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i));
     let coarsePointer = window.matchMedia("(any-pointer:coarse)").matches;
     
-    if (orientationLandscape || (!isMobile) || coarsePointer) { toggleCustomCursor(true); }
-    
     window.addEventListener("touchstart", detectTouch);
-    
+
     function detectTouch() {  // If a touch is detected, make sure the custom cursor is disabled 
         console.log("isMobile");
         window.removeEventListener("touchstart", detectTouch);
+        window.removeEventListener("mousemove", customCursorListener);
+    }
+    
+    window.addEventListener('mousemove', detectCursor);
+    
+    function detectCursor() {  // If a cursor is detected, make sure the custom cursor is enabled 
+        console.log("isDesktop");
+        toggleCustomCursor(true);
+        window.removeEventListener("mousemove", detectCursor);
     }
     
         /*------------------------------------------------------------
