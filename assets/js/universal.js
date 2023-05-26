@@ -213,13 +213,6 @@ TABLE OF CONTENTS
     
     window.addEventListener('mousemove', customCursorListener);
     
-    function detectTouch() {  // If a touch is detected, make sure the custom cursor is disabled 
-        console.log("isMobile");
-        toggleCustomCursor(false);
-        window.removeEventListener("touchstart", detectTouch);
-        window.removeEventListener("mousemove", customCursorListener);
-    }
-    
     function toggleCustomCursor(enable=true) {
         if (enable) {display = 'block'} else {display = 'none'}
         cursor.style.display = display;
