@@ -5,7 +5,7 @@
 </p>
 
 [![Maintainability](https://img.shields.io/codeclimate/maintainability/alexlostorto/magic-notes?style=for-the-badge&message=Code+Climate&labelColor=222222&logo=Code+Climate&logoColor=FFFFFF)](https://codeclimate.com/github/alexlostorto/magic-notes/maintainability)
-![](https://vbr.wocr.tk/badge?page_id=alexlostorto.magic-notes&color=ffc500&style=for-the-badge&logo=Github)
+![](https://vbr.wocr.tk/badge?page_id=alexlostorto.magic-notes&text=users&lcolor=222222&color=ffc500&style=for-the-badge&logo=Github)
 
 Welcome to **Magic Notes**! Please read the **terms and conditions** [**here**](T&C.txt) before using the extension.
 
