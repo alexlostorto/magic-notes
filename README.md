@@ -5,6 +5,7 @@
 </p>
 
 [![Maintainability](https://img.shields.io/codeclimate/maintainability/alexlostorto/magic-notes?style=for-the-badge&message=Code+Climate&labelColor=222222&logo=Code+Climate&logoColor=FFFFFF)](https://codeclimate.com/github/alexlostorto/magic-notes/maintainability)
+![User Count](https://vbr.wocr.tk/badge?page_id=alexlostorto.magic-notes&text=users&lcolor=222222&color=ffc500&style=for-the-badge&logo=Github)
 
 Welcome to **Magic Notes**! Please read the **terms and conditions** [**here**](T&C.txt) before using the extension.
 
@@ -55,20 +56,20 @@ Click [**here**](https://alexlostorto.github.io/magic-notes/) to visit the **Mag
 ## 🎬 Gameplay
 
 <p align="center">
-  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/.github/home-page.png">
+  <img width="100%" src="https://github.com/alexlostorto/sparx/raw/main/.github/home-page.png" alt="Image of the Sparx home page">
 </p>
 <p align="center">
-  <img width="70%" src="https://github.com/alexlostorto/sparx/raw/main/.github/bookwork-code.png">
+  <img width="70%" src="https://github.com/alexlostorto/sparx/raw/main/.github/bookwork-code.png" alt="Image of a Sparx bookwork check">
 </p>
 
 ## 🖌 Colour Themes
 
-|    Theme     |                                    Preview                                    |
-| :----------: | :---------------------------------------------------------------------------: |
-|   `stone`    |  ![stone](https://github.com/alexlostorto/sparx/raw/main/.github/theme1.png)  |
-|  `boulder`   | ![boulder](https://github.com/alexlostorto/sparx/raw/main/.github/theme2.png) |
-|   `angel`    |  ![angel](https://github.com/alexlostorto/sparx/raw/main/.github/theme3.png)  |
-| More themes! |         **🎨 [See a list of all available themes](./docs/themes.md)**         |
+|    Theme     |                                       Preview                                       |
+| :----------: | :---------------------------------------------------------------------------------: |
+|   `stone`    |  ![Stone theme](https://github.com/alexlostorto/sparx/raw/main/.github/theme1.png)  |
+|  `boulder`   | ![Boulder theme](https://github.com/alexlostorto/sparx/raw/main/.github/theme2.png) |
+|   `angel`    |  ![Angel theme](https://github.com/alexlostorto/sparx/raw/main/.github/theme3.png)  |
+| More themes! |            **🎨 [See a list of all available themes](./docs/themes.md)**            |
 
 ## 🙋 FAQ
 
