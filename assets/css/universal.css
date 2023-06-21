@@ -361,15 +361,15 @@ body {
     box-sizing: border-box;
     z-index: 10000000 !important;
     opacity: .5;
-    -webkit-transition: all .08s ease-out;
-    -o-transition: all .08s ease-out;
-    transition: all .08s ease-out;
+    -webkit-transition: width .08s ease-out, height .08s ease-out, background-color 1s;
+    -o-transition: width .08s ease-out, height .08s ease-out, background-color 1s;
+    transition: width .08s ease-out, height .08s ease-out, background-color 1s;
 }
 
 .custom-cursor .inner {
     position: absolute;
     background-color: var(--darkest);
-    transition: linear height 0.2s, linear width 0.2s;
+    transition: linear height 0.2s, linear width 0.2s, background-color 1s;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 6px;
@@ -546,11 +546,6 @@ background: var(--dark);
 .header span {
     line-height: 100%;
     letter-spacing: -.02em;
-}
-
-.header-text, 
-.header h2 {
-    animation: fadeIn 3s;
 }
 
 .header-description {

@@ -28,6 +28,7 @@ TABLE OF CONTENTS
 
 const homePage = document.querySelector('.body-container');
 const bodyElement = document.querySelector('body');
+const navbar = document.querySelector('.nav-container');
 const toggleButton = document.querySelector('.toggle-button');
 const resourcesButton = document.querySelector('.resources-button');
 const resourcesLinks = document.querySelector('.nav-resources');

@@ -1,6 +1,43 @@
+/* Loading Screen */
+body {
+    overflow-y: hidden;
+}
+
+.nav-container,
+.main.page {
+    display: none;
+}
+
+.custom-cursor.inner {
+    background-color: white;
+}
+
+.custom-cursor.outer {
+    border-color: white;
+}
+
 .slide {
     justify-content: center;
     height: 100vh;
+}
+
+.slide.splash {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    display: flex;
+    width: 100%;
+    background-color: var(--darkest);
+    transition: 1s;
+}
+
+.slide.splash .header {
+    margin: 0;
+}
+
+.slide.splash span {
+    color: white;
 }
 
 .header {
