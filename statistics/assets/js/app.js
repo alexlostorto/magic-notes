@@ -7,8 +7,9 @@ const instructions = document.querySelector('.slide article');
 const fetchButton = document.querySelector('#fetch-button');
 const statsTable = document.querySelector('#statistics');
 
-fadeIn(headerText, 500);
-fadeIn(headerDescription, 800);
+fadeIn(headerText, 200);
+fadeIn(headerDescription, 500);
+fadeIn(fetchButton, 600);
 
 fetchButton.addEventListener('click', async () => {
     fetchButton.textContent = 'Fetching...';

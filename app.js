@@ -21,7 +21,7 @@ async function startPage() {
     
     fadeIn(mainPage.querySelector('.header-text'), 200);
     fadeIn(mainPage.querySelector('.header-description'), 500);
-    fadeIn(mainPage.querySelector('.arrow'), 1000);
+    fadeIn(copyButton, 600);
 }
 
 startPage();

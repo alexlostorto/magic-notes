@@ -41,12 +41,12 @@ body {
 }
 
 .header {
-    padding: 5vh 1rem 8vh;
+    padding: 5vh 1rem 10vh;
 }
 
 /* Responsive Media */
 @media (max-width: 800px) {
     .header {
-        margin-bottom: 5rem;
+        padding-bottom: 5rem;
     }
 }

@@ -6,9 +6,9 @@ const headerDescription = document.querySelector('.header-description');
 const instructions = document.querySelector('.slide article');
 const downloadButton = document.querySelector('#download-button');
 
-fadeIn(headerText, 500);
-fadeIn(headerDescription, 800);
-fadeIn(instructions, 1000);
+fadeIn(headerText, 200);
+fadeIn(headerDescription, 500);
+fadeIn(instructions, 800);
 
 function download(uri, name) {
     var link = document.createElement("a");
