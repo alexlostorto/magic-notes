@@ -449,8 +449,6 @@ background: var(--dark);
     ------------------------------------------------------------*/
 
 .arrow {
-    top: 75%;
-    position: absolute;
     text-align: center;
 }
 
@@ -532,12 +530,29 @@ background: var(--dark);
 
 .slide article {
     display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+.slide article div {
+    width: 30rem;
+    border: 2px solid var(--darkest);
+    border-radius: 2rem;
+    display: flex;
     align-items: center;
     flex-direction: column;
 }
 
 .slide article p {
     padding: 1rem 5vh;
+}
+
+.slide article a {
+    text-align: center;
+}
+
+.slide article img {
+    padding-bottom: 1rem;
 }
 
 /*--------------------------------------------------------------
@@ -745,6 +760,10 @@ background: var(--dark);
     .header-description {
         font-size: 1.2rem;
     }
+
+    .slide article div {
+        width: 23rem;
+    }
 }
 
 @media (max-width: 500px) {
@@ -774,5 +793,9 @@ background: var(--dark);
 
     .footer p {
         font-size: smaller;
+    }
+
+    .slide article div {
+        width: 20rem;
     }
 }
