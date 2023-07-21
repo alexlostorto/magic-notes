@@ -1,1 +1,827 @@
-const _0x1b4f87=_0x52a5;(function(_0x4c332f,_0x5e9046){const _0xdb9943=_0x52a5,_0x2bc011=_0x4c332f();while(!![]){try{const _0x12eedf=-parseInt(_0xdb9943(0x100))/0x1+-parseInt(_0xdb9943(0x17e))/0x2+-parseInt(_0xdb9943(0x109))/0x3+-parseInt(_0xdb9943(0xe5))/0x4*(-parseInt(_0xdb9943(0x169))/0x5)+parseInt(_0xdb9943(0xcf))/0x6+-parseInt(_0xdb9943(0x12c))/0x7*(parseInt(_0xdb9943(0x149))/0x8)+parseInt(_0xdb9943(0x184))/0x9;if(_0x12eedf===_0x5e9046)break;else _0x2bc011['push'](_0x2bc011['shift']());}catch(_0x354485){_0x2bc011['push'](_0x2bc011['shift']());}}}(_0x4757,0xedc99),console[_0x1b4f87(0x186)](_0x1b4f87(0x118)));const sleep=_0x375921=>{return new Promise(_0xb47e2a=>setTimeout(_0xb47e2a,_0x375921));},themes={0x1:{'darkest':_0x1b4f87(0xee),'dark':_0x1b4f87(0xd7),'light':_0x1b4f87(0x106),'lightest':'#6c757d'},0x2:{'darkest':_0x1b4f87(0x173),'dark':_0x1b4f87(0x189),'light':_0x1b4f87(0xef),'lightest':_0x1b4f87(0xf6)},0x3:{'darkest':_0x1b4f87(0x11b),'dark':_0x1b4f87(0xf5),'light':_0x1b4f87(0x177),'lightest':'#E5A5FF'},0x4:{'darkest':_0x1b4f87(0x18e),'dark':_0x1b4f87(0xfd),'light':_0x1b4f87(0x179),'lightest':_0x1b4f87(0x12d)},0x5:{'darkest':'#001233','dark':_0x1b4f87(0x146),'light':'#023e7d','lightest':'#0466c8'},0x6:{'darkest':'#590d22','dark':_0x1b4f87(0xfb),'light':_0x1b4f87(0x11e),'lightest':_0x1b4f87(0x10e)},0x7:{'darkest':_0x1b4f87(0x147),'dark':_0x1b4f87(0x16c),'light':_0x1b4f87(0xdd),'lightest':'#EC0000'},0x8:{'darkest':_0x1b4f87(0xd8),'dark':_0x1b4f87(0xd4),'light':_0x1b4f87(0x115),'lightest':_0x1b4f87(0x14b)},0x9:{'darkest':'#1a001c','dark':_0x1b4f87(0xd1),'light':_0x1b4f87(0x11a),'lightest':_0x1b4f87(0x136)}},themeStyles='.themes-container{display:flex;align-items:center;justify-content:center;flex-direction:column;width:500px}.themes-container\x20ul{border:2px\x20solid\x20#fff;padding:0;display:flex;flex-direction:column;width:100%}.themes-container\x20ul\x20li{list-style-type:none;display:flex;flex-direction:row}.themes-container\x20ul\x20li\x20div{background-color:orange;height:50px;width:25%}.themes-container\x20ul\x20li:hover{cursor:pointer;filter:brightness(80%)}@media\x20(max-width:\x201000px){.themes-container{width:60vw}}',darkModeStyles=_0x1b4f87(0x10b);async function fetchDependencies(){const _0x2bdc86=_0x1b4f87;let _0x46c6ad=await fetch('https://raw.githubusercontent.com/alexlostorto/sparx/main/release.json'),_0x1fa44c=await _0x46c6ad[_0x2bdc86(0x102)]();for(url of _0x1fa44c['dependencies']['js']){let _0x215ae4=document[_0x2bdc86(0x18c)](_0x2bdc86(0xf8));_0x215ae4[_0x2bdc86(0x144)]=url,_0x215ae4[_0x2bdc86(0x18b)]=![],_0x215ae4[_0x2bdc86(0x15a)]=![],document[_0x2bdc86(0x15f)]['appendChild'](_0x215ae4);}for(url of _0x1fa44c[_0x2bdc86(0x101)][_0x2bdc86(0x119)]){let _0x323fa6=document[_0x2bdc86(0x18c)]('link');_0x323fa6[_0x2bdc86(0x148)]=url,_0x323fa6[_0x2bdc86(0x108)]='stylesheet',document[_0x2bdc86(0x15f)][_0x2bdc86(0xd5)](_0x323fa6);}}fetchDependencies(),document['head']['insertAdjacentHTML'](_0x1b4f87(0xcc),_0x1b4f87(0x107)+themeStyles+_0x1b4f87(0x132)),document[_0x1b4f87(0x15f)][_0x1b4f87(0x129)](_0x1b4f87(0xcc),_0x1b4f87(0x107)+darkModeStyles+'</style>'),colours=getLocalStorage(_0x1b4f87(0x18d));colours==null?(document[_0x1b4f87(0x123)][_0x1b4f87(0xcd)][_0x1b4f87(0x158)](_0x1b4f87(0x181),themes[0x3]['darkest']),document[_0x1b4f87(0x123)]['style'][_0x1b4f87(0x158)](_0x1b4f87(0xf9),themes[0x3][_0x1b4f87(0x191)]),document[_0x1b4f87(0x123)]['style'][_0x1b4f87(0x158)]('--light',themes[0x3][_0x1b4f87(0x156)]),document[_0x1b4f87(0x123)]['style'][_0x1b4f87(0x158)](_0x1b4f87(0xe4),themes[0x3]['lightest'])):(document[_0x1b4f87(0x123)][_0x1b4f87(0xcd)][_0x1b4f87(0x158)](_0x1b4f87(0x181),themes[colours[_0x1b4f87(0x17f)]][_0x1b4f87(0xf7)]),document[_0x1b4f87(0x123)]['style'][_0x1b4f87(0x158)](_0x1b4f87(0xf9),themes[colours[_0x1b4f87(0x17f)]]['dark']),document['documentElement']['style']['setProperty'](_0x1b4f87(0xea),themes[colours[_0x1b4f87(0x17f)]][_0x1b4f87(0x156)]),document[_0x1b4f87(0x123)][_0x1b4f87(0xcd)][_0x1b4f87(0x158)](_0x1b4f87(0xe4),themes[colours['theme']][_0x1b4f87(0xf0)]));const grey='#f8f8f7',orange=_0x1b4f87(0x185);function _0x4757(){const _0x1368f9=['Submit','It\x20doesn\x27t\x20matter\x20:)','split','15cQoNET','keypress','button-icon\x20button-icon-right','#3D0000','Auto\x20Higher\x20or\x20Lower?','innerText','toString','created','documents','.taskitem-selectable','#7f5539','justify-content','Enter','slice','#7B6CF6','span.text','#5a189a','.answer-markup.choice-wac-option','time','setItem','button-text','811534OkoTTW','theme','find','--darkest','.minigame-title','POST','7016895LknrOY','#f46815','log','div','childNodes','#9c6644','img','async','createElement','colour-theme','#10002b','includes','#custom-answer','dark','push','color:\x20#fff;\x20background:\x20#8000ff;\x20padding:5px\x200;','katex','color','background-color','parse','attributes','beforeend','style','4rem','11572482CbzAmC','currentSrc','#250327','annotation','.number-input','#31572c','appendChild','display','#343a40','#132a13','.wac-text-container\x20.bookwork-code','document','click','https://data.mongodb-api.com/app/','#950101','clear','border','class','custom-answer','.answer-part\x20.gap-card.selected,\x20.choice.selected','color:\x20#fff;\x20background:\x20#242424;\x20padding:5px\x200\x205px\x205px;','--lightest','205084ciYrzx','font-size','done','%c\x20Thanks\x20for\x20using\x20my\x20Sparx\x20program!\x20','getElementById','--light','center','contains','textContent','#212529','#b08968','lightest','answers','https://realm.mongodb.com/api/client/v2.0/app/','insertedId','.question','#5432D3','#ddb892','darkest','script','--dark','user-data','#800f2f','addEventListener','#3c096c','Question\x20already\x20in\x20database','.wac-text-container','1052276WDfNfN','dependencies','json','none','insertOne','.choice-wac-options\x20.item','#495057','<style>','rel','187545oiJQpN','.status-bar-label-text',':root{--orange:#f46815;}:root{--grey:#f8f8f7;}:root{--dark-grey:#e9e9e9;}[class~=answer-markup][class~=choice-wac-option][class~=choice][class~=choice-answer-markup]{background:var(--grey)\x20!important;}:root{--darkest:#241e92;}.entry-area-bubble\x20.text,[class~=answer]\x20[class~=markdown][class~=text-container]{color:var(--darkest)\x20!important;}:root{--dark:#5432d3;}:root{--light:#7b6cf6;}:root{--lightest:#e5a5ff;}[class~=um-login-container],[class~=main-view],.view-body,[class~=package-container]{background:var(--darkest)\x20!important;}.rewards-progress-levels,.package-filter-list,[class~=rewards-section-content],[class~=rewards-section][class~=insights-lifetime-totals],[class~=rewards-faqs]\x20[class~=accordion-element-header],[class~=revision-topic-page],.revision-homework-button-container,[class~=rewards-section-header]{background:var(--dark)\x20!important;}[class~=rewards-section]{border-left-color:var(--dark)\x20!important;}[class~=rewards-section]{border-bottom-color:var(--dark)\x20!important;}[class~=rewards-section]{border-right-color:var(--dark)\x20!important;}[class~=rewards-section]{border-top-color:var(--dark)\x20!important;}[class~=status-bar],[class~=revision-strand-page],[class~=question-only],[class~=rewards-progress-level]:hover,[class~=status-bar-label-text],[class~=question-text],[class~=revision-tab],[class~=rewards-section-row],[class~=btn-menu-item],[class~=answer-only],[class~=um-header],.footer-cookie-banner-container,.revision-task,.revision-strand-button,[class~=revision-homework-button],[class~=activity-feed-day],[class~=package-heading],[class~=wac-text-container]\x20[class~=bookwork-code],#pass-wac-box,#not-done-wac-box,[class~=footer-container],[class~=insights-lifetime-total],[class~=skill-delivery-view]\x20[class~=view-body]{background:var(--light)\x20!important;}[class~=revision-tabs]{border-bottom-width:medium\x20!important;}[class~=revision-tabs]{border-bottom-style:none\x20!important;}[class~=revision-tabs]{border-bottom-color:var(--light)\x20!important;}[class~=revision-tabs]{border-image:none\x20!important;}[class~=btn-menu-item]{border-left-width:.0625pc\x20!important;}[class~=btn-menu-item]{border-bottom-width:.0625pc\x20!important;}[class~=btn-menu-item]{border-right-width:.0625pc\x20!important;}[class~=btn-menu-item]{border-top-width:.0625pc\x20!important;}[class~=btn-menu-item]{border-left-style:solid\x20!important;}[class~=btn-menu-item]{border-bottom-style:solid\x20!important;}[class~=btn-menu-item]{border-right-style:solid\x20!important;}[class~=btn-menu-item]{border-top-style:solid\x20!important;}[class~=btn-menu-item]{border-left-color:var(--light)\x20!important;}[class~=btn-menu-item]{border-bottom-color:var(--light)\x20!important;}[class~=btn-menu-item]{border-right-color:var(--light)\x20!important;}[class~=btn-menu-item]{border-top-color:var(--light)\x20!important;}[class~=btn-menu-item]{border-image:none\x20!important;}[class~=package-heading]{border-left-width:.0625pc\x20!important;}[class~=package-heading]{border-bottom-width:.0625pc\x20!important;}[class~=package-heading]{border-right-width:.0625pc\x20!important;}[class~=package-heading]{border-top-width:.0625pc\x20!important;}[class~=package-heading]{border-left-style:solid\x20!important;}[class~=package-heading]{border-bottom-style:solid\x20!important;}[class~=package-heading]{border-right-style:solid\x20!important;}[class~=package-heading]{border-top-style:solid\x20!important;}[class~=package-heading]{border-left-color:var(--light)\x20!important;}[class~=package-heading]{border-bottom-color:var(--light)\x20!important;}[class~=package-heading]{border-right-color:var(--light)\x20!important;}[class~=package-heading]{border-top-color:var(--light)\x20!important;}[class~=package-heading]{border-image:none\x20!important;}[class~=revision-homework-button]{border-left-width:.0625pc\x20!important;}[class~=revision-homework-button]{border-bottom-width:.0625pc\x20!important;}[class~=revision-homework-button]{border-right-width:.0625pc\x20!important;}[class~=revision-homework-button]{border-top-width:.0625pc\x20!important;}[class~=revision-homework-button]{border-left-style:solid\x20!important;}[class~=revision-homework-button]{border-bottom-style:solid\x20!important;}[class~=revision-homework-button]{border-right-style:solid\x20!important;}[class~=revision-homework-button]{border-top-style:solid\x20!important;}[class~=revision-homework-button]{border-left-color:var(--light)\x20!important;}[class~=result-inner]\x20h1[class~=incorrect],[class~=activity-feed-day]\x20>\x20h2,[class~=answer-part]\x20>\x20div\x20>\x20[class~=text],[class~=question-text]\x20>\x20div\x20>\x20[class~=text]{color:var(--grey)\x20!important;}[class~=revision-homework-button]{border-bottom-color:var(--light)\x20!important;}[class~=revision-homework-button]{border-right-color:var(--light)\x20!important;}[class~=revision-homework-button]{border-top-color:var(--light)\x20!important;}[class~=revision-homework-button]{border-image:none\x20!important;}[class~=wac-text-container]\x20[class~=bookwork-code],[class~=accordion-element-header]{border-left-width:medium\x20!important;}[class~=accordion-element-header],[class~=wac-text-container]\x20[class~=bookwork-code]{border-bottom-width:medium\x20!important;}[class~=accordion-element-header],[class~=wac-text-container]\x20[class~=bookwork-code]{border-right-width:medium\x20!important;}[class~=wac-text-container]\x20[class~=bookwork-code],[class~=accordion-element-header]{border-top-width:medium\x20!important;}[class~=wac-text-container]\x20[class~=bookwork-code],[class~=accordion-element-header]{border-left-style:none\x20!important;}[class~=accordion-element-header],[class~=wac-text-container]\x20[class~=bookwork-code]{border-bottom-style:none\x20!important;}[class~=accordion-element-header],[class~=wac-text-container]\x20[class~=bookwork-code]{border-right-style:none\x20!important;}#answer-wac-box,[class~=um-login-box__content]{background:var(--lightest)\x20!important;}[class~=accordion-element-header],[class~=wac-text-container]\x20[class~=bookwork-code]{border-top-style:none\x20!important;}[class~=wac-text-container]\x20[class~=bookwork-code],[class~=accordion-element-header]{border-left-color:currentColor\x20!important;}[class~=wac-text-container]\x20[class~=bookwork-code],[class~=accordion-element-header]{border-bottom-color:currentColor\x20!important;}[class~=accordion-element-header],[class~=wac-text-container]\x20[class~=bookwork-code]{border-right-color:currentColor\x20!important;}[class~=accordion-element-header],[class~=wac-text-container]\x20[class~=bookwork-code]{border-top-color:currentColor\x20!important;}[class~=wac-text-container]\x20[class~=bookwork-code],[class~=accordion-element-header]{border-image:none\x20!important;}[class~=activity-feed-work]{border-left-width:medium\x20!important;}[class~=activity-feed-work]{border-bottom-width:medium\x20!important;}[class~=activity-feed-work]{border-right-width:medium\x20!important;}[class~=activity-feed-work]{border-top-width:medium\x20!important;}[class~=activity-feed-work]{border-left-style:none\x20!important;}[class~=activity-feed-work]{border-bottom-style:none\x20!important;}[class~=activity-feed-work]{border-right-style:none\x20!important;}[class~=activity-feed-work]{border-top-style:none\x20!important;}[class~=activity-feed-work]{border-left-color:currentColor\x20!important;}[class~=activity-feed-work]{border-bottom-color:currentColor\x20!important;}[class~=activity-feed-work]{border-right-color:currentColor\x20!important;}[class~=activity-feed-work]{border-top-color:currentColor\x20!important;}[class~=activity-feed-work]{border-image:none\x20!important;}[class~=dummytaskitem]{border-left-width:medium\x20!important;}[class~=dummytaskitem]{border-bottom-width:medium\x20!important;}[class~=status-bar-menu-item]:not(:first-child):before{left:-2.25pt\x20!important;}[class~=dummytaskitem]{border-right-width:medium\x20!important;}[class~=dummytaskitem]{border-top-width:medium\x20!important;}[class~=dummytaskitem]{border-left-style:none\x20!important;}[class~=dummytaskitem]{border-bottom-style:none\x20!important;}[class~=dummytaskitem]{border-right-style:none\x20!important;}[class~=dummytaskitem]{border-top-style:none\x20!important;}[class~=status-bar-menu-item]:not(:first-child):before{width:110%\x20!important;}[class~=status-bar-menu-item]:not(:first-child):before{border-bottom-width:.75pt\x20!important;}[class~=dummytaskitem]{border-left-color:currentColor\x20!important;}[class~=dummytaskitem]{border-bottom-color:currentColor\x20!important;}[class~=dummytaskitem]{border-right-color:currentColor\x20!important;}[class~=dummytaskitem]{border-top-color:currentColor\x20!important;}[class~=dummytaskitem]{border-image:none\x20!important;}[class~=status-bar-menu-item],[class~=choice-wac-options],.revision-task-item,[class~=revision-tab][class~=revision-tab-active],[class~=activity-feed-work],[class~=status-bar-menu-button],[class~=accordion-element-header]{background:var(--lightest)\x20!important;}.status-bar-menu-button,[class~=status-bar-menu-item]:not(:first-child):before{border-bottom-style:solid\x20!important;}.status-bar-menu-button{border-left-width:medium\x20!important;}.status-bar-menu-button{border-bottom-width:medium\x20!important;}.status-bar-menu-button{border-right-width:medium\x20!important;}.status-bar-menu-button{border-top-width:medium\x20!important;}.status-bar-menu-button{border-left-style:solid\x20!important;}.status-bar-menu-button{border-right-style:solid\x20!important;}.status-bar-menu-button{border-top-style:solid\x20!important;}[class~=status-bar-menu-item]:not(:first-child):before{border-bottom-color:var(--darkest)\x20!important;}.status-bar-menu-button{border-left-color:var(--lightest)\x20!important;}.status-bar-menu-button{border-bottom-color:var(--lightest)\x20!important;}[class~=revision-topic-page],[class~=text-container],[class~=insights-lifetime-total],[class~=revision-strand-button],.btn-menu-item,[class~=revision-substrand-extra],.revision-location-stream,[class~=wac-header-container],[class~=minigame-description]\x20>\x20div,[class~=accordion-element-header],[class~=activity-feed-work],.result-inner\x20h2,[class~=activity-feed-work-counts],[class~=revision-homework-button],[class~=rewards-progress-level-label-text],[class~=school-selector],[class~=wac-text],[class~=rewards-section-header-title],[class~=result-inner]\x20[class~=result-subtitle-prominent],.package-heading,[class~=wac-message],.rewards-section-row{color:var(--grey)\x20!important;}.status-bar-menu-button{border-right-color:var(--lightest)\x20!important;}.status-bar-menu-button{border-top-color:var(--lightest)\x20!important;}.status-bar-menu-button{border-image:none\x20!important;}[class~=package-list]\x20>\x20div\x20>\x20span\x20>\x20ul\x20>\x20div{background:var(--dark)\x20!important;}.status-bar-menu-item{border-left-color:var(--lightest)\x20!important;}.status-bar-menu-item{border-bottom-color:var(--lightest)\x20!important;}[class~=selected]\x20[class~=text],[class~=choice-wac-option][class~=selected]{color:var(--orange)\x20!important;}.status-bar-menu-item{border-right-color:var(--lightest)\x20!important;}.status-bar-menu-item{border-top-color:var(--lightest)\x20!important;}[class~=package-list]\x20>\x20div\x20>\x20span\x20>\x20ul\x20>\x20div\x20>\x20[class~=task-title]{color:var(--dark-grey)\x20!important;}[class~=taskitem]\x20>\x20[class~=icon]{filter:brightness(5)\x20!important;}.package-list\x20>\x20div\x20>\x20span\x20>\x20ul\x20>\x20div{border-left-color:var(--dark)\x20!important;}[class~=choice-text]{background:var(--grey)\x20!important;}.revision-location-stream,[class~=revision-strand-button],[class~=active]{border-left-color:var(--grey)\x20!important;}[class~=active],.revision-location-stream,[class~=revision-strand-button]{border-bottom-color:var(--grey)\x20!important;}.revision-location-stream,[class~=revision-strand-button],[class~=active]{border-right-color:var(--grey)\x20!important;}[class~=revision-strand-button],[class~=active],.revision-location-stream{border-top-color:var(--grey)\x20!important;}[class~=active]{border-left-width:.75pt\x20!important;}[class~=active]{border-bottom-width:.75pt\x20!important;}[class~=active]{border-right-width:.75pt\x20!important;}[class~=active]{border-top-width:.75pt\x20!important;}[class~=active]{border-left-style:solid\x20!important;}[class~=active]{border-bottom-style:solid\x20!important;}[class~=active]{border-right-style:solid\x20!important;}[class~=active]{border-top-style:solid\x20!important;}.package-list\x20>\x20div\x20>\x20span\x20>\x20ul\x20>\x20div{border-bottom-color:var(--dark)\x20!important;}.package-list\x20>\x20div\x20>\x20span\x20>\x20ul\x20>\x20div{border-right-color:var(--dark)\x20!important;}[class~=status-bar-menu-item]:not(:first-child):before,[class~=active]{border-image:none\x20!important;}.package-filter-arrow{border-left-color:var(--grey)\x20!important;}.rewards-section-header{border-radius:0\x20!important;}[class~=revision-strand-icon],.status-bar-menu-item-img{filter:grayscale(100%)\x20brightness(5)\x20!important;}.package-list\x20>\x20div\x20>\x20span\x20>\x20ul\x20>\x20div{border-top-color:var(--dark)\x20!important;}[class~=rewards-progress-level]:hover\x20[class~=rewards-progress-level-label-text]{color:var(--orange)\x20!important;}[class~=status-bar-menu-item]:hover\x20>\x20[class~=status-bar-menu-item-img]{filter:none\x20!important;}','/auth/providers/api-key/login','Database\x20updated','#ff4d6d','You\x20clicked\x20theme\x20','key','setAttribute','margin-top','target','application/json','#4f772d','toJSON','data-pddjp','Script\x20is\x20running','css','#2f0631','#241E92','0123456789abcdef','Bookwork\x20code:\x20','#a4133c','#shown-answer','findOne','length','white','documentElement','[data-test-target=\x22image-img\x22]','filter','join','access_token','Bearer\x20','insertAdjacentHTML','entries','users','21448hMqmob','#9d4edd','.revision-task-item.btn-menu-item','stringify','width','#skill-delivery-submit-button','</style>','.result-inner','.pill.done','last-login','#3a093c','.status-bar-label.status-bar-label-username','span','apply','.slots\x20.slot','forEach','50%','className','parentElement','querySelectorAll','POSTing\x20answer\x20data\x20to\x20database','replace','querySelector','shown-answer','src','append','#001845','#000000','href','960xTequs','_id','#90a955','align-items','flex','sparx-data','render','unique','---PROCESSING\x20ANSWER---','5px\x20solid\x20var(--orange)','user','20px','getItem','light','themes-container','setProperty','margin-bottom','defer','charCodeAt','https','Answer:\x20','.bookwork-code','head','map','updateOne','floor','.themes-container','now','charAt'];_0x4757=function(){return _0x1368f9;};return _0x4757();}console[_0x1b4f87(0x186)](JSON[_0x1b4f87(0xca)](localStorage[_0x1b4f87(0x155)](_0x1b4f87(0x14e))));const mutationObserver=new MutationObserver(function(_0x2c1a14){_0x2c1a14['forEach'](function(){main();});});mutationObserver['observe'](document['documentElement'],{'attributeFilter':['class'],'characterData':!![],'childList':!![],'subtree':!![],'characterDataOldValue':!![]});const appName=_0x1b4f87(0x117),apiKey='ZTxLUr2NMrbV12Bn5CGA5qGfmoG48pBhQAyEnPsClNqmVsPmAe4OM4R8C2I5T46z',mongoDatabaseURL=_0x1b4f87(0xdc)+appName+'/endpoint/data/v1/action/';let authorisedToken=null,tokenLife=0x0,userDocumentId=null,userName=null,userData=null,question=null,answer=null;function getTimestampInSeconds(){const _0x4ef2b1=_0x1b4f87;return Math[_0x4ef2b1(0x162)](Date[_0x4ef2b1(0x164)]()/0x3e8);}function md5(_0x54952f){const _0x347686=_0x1b4f87;var _0x2cb327=_0x347686(0x11c);function _0x13a1a1(_0x30d95b){const _0x18b369=_0x347686;var _0xa5d0d5,_0x5064ff='';for(_0xa5d0d5=0x0;_0xa5d0d5<=0x3;_0xa5d0d5++)_0x5064ff+=_0x2cb327[_0x18b369(0x165)](_0x30d95b>>_0xa5d0d5*0x8+0x4&0xf)+_0x2cb327[_0x18b369(0x165)](_0x30d95b>>_0xa5d0d5*0x8&0xf);return _0x5064ff;}function _0x1bb5ef(_0x21b058,_0x196a71){var _0x74e910=(_0x21b058&0xffff)+(_0x196a71&0xffff),_0x548f2e=(_0x21b058>>0x10)+(_0x196a71>>0x10)+(_0x74e910>>0x10);return _0x548f2e<<0x10|_0x74e910&0xffff;}function _0x2759cd(_0x18f7ee,_0x5bcaaa){return _0x18f7ee<<_0x5bcaaa|_0x18f7ee>>>0x20-_0x5bcaaa;}function _0x8583b7(_0x89765b,_0x535682,_0x444979,_0x4ba222,_0x475ef3,_0x1b3095){return _0x1bb5ef(_0x2759cd(_0x1bb5ef(_0x1bb5ef(_0x535682,_0x89765b),_0x1bb5ef(_0x4ba222,_0x1b3095)),_0x475ef3),_0x444979);}function _0x51807d(_0x3a7f2f,_0x49b77e,_0x5d4f9c,_0x560bea,_0x1dc596,_0x209abb,_0x51066a){return _0x8583b7(_0x49b77e&_0x5d4f9c|~_0x49b77e&_0x560bea,_0x3a7f2f,_0x49b77e,_0x1dc596,_0x209abb,_0x51066a);}function _0x4b1d3e(_0x293155,_0x325d51,_0x4ff10e,_0x51694d,_0x2a0769,_0x236681,_0x4b8cbe){return _0x8583b7(_0x325d51&_0x51694d|_0x4ff10e&~_0x51694d,_0x293155,_0x325d51,_0x2a0769,_0x236681,_0x4b8cbe);}function _0x222bdd(_0x1d9318,_0x1aca63,_0x57d59e,_0x5c2aa5,_0x326878,_0x3fe7c5,_0x1629cc){return _0x8583b7(_0x1aca63^_0x57d59e^_0x5c2aa5,_0x1d9318,_0x1aca63,_0x326878,_0x3fe7c5,_0x1629cc);}function _0x428c09(_0x28bb82,_0x426dfa,_0x1bb4d7,_0x2d9226,_0x350b5d,_0x5a4bc,_0x3cc497){return _0x8583b7(_0x1bb4d7^(_0x426dfa|~_0x2d9226),_0x28bb82,_0x426dfa,_0x350b5d,_0x5a4bc,_0x3cc497);}function _0x3b184c(_0x5e1668){const _0x182e77=_0x347686;var _0x27a75d,_0x59e0e4=(_0x5e1668[_0x182e77(0x121)]+0x8>>0x6)+0x1,_0x1959f9=new Array(_0x59e0e4*0x10);for(_0x27a75d=0x0;_0x27a75d<_0x59e0e4*0x10;_0x27a75d++)_0x1959f9[_0x27a75d]=0x0;for(_0x27a75d=0x0;_0x27a75d<_0x5e1668[_0x182e77(0x121)];_0x27a75d++)_0x1959f9[_0x27a75d>>0x2]|=_0x5e1668[_0x182e77(0x15b)](_0x27a75d)<<_0x27a75d%0x4*0x8;return _0x1959f9[_0x27a75d>>0x2]|=0x80<<_0x27a75d%0x4*0x8,_0x1959f9[_0x59e0e4*0x10-0x2]=_0x5e1668[_0x182e77(0x121)]*0x8,_0x1959f9;}var _0x5d4f2c,_0x1ca19d=_0x3b184c(''+_0x54952f),_0x1f3de0=0x67452301,_0x1c6809=-0x10325477,_0x96f6a0=-0x67452302,_0x2f6a55=0x10325476,_0x4b874c,_0x490a56,_0x19fc86,_0x2f1dd4;for(_0x5d4f2c=0x0;_0x5d4f2c<_0x1ca19d['length'];_0x5d4f2c+=0x10){_0x4b874c=_0x1f3de0,_0x490a56=_0x1c6809,_0x19fc86=_0x96f6a0,_0x2f1dd4=_0x2f6a55,_0x1f3de0=_0x51807d(_0x1f3de0,_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1ca19d[_0x5d4f2c+0x0],0x7,-0x28955b88),_0x2f6a55=_0x51807d(_0x2f6a55,_0x1f3de0,_0x1c6809,_0x96f6a0,_0x1ca19d[_0x5d4f2c+0x1],0xc,-0x173848aa),_0x96f6a0=_0x51807d(_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1c6809,_0x1ca19d[_0x5d4f2c+0x2],0x11,0x242070db),_0x1c6809=_0x51807d(_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1ca19d[_0x5d4f2c+0x3],0x16,-0x3e423112),_0x1f3de0=_0x51807d(_0x1f3de0,_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1ca19d[_0x5d4f2c+0x4],0x7,-0xa83f051),_0x2f6a55=_0x51807d(_0x2f6a55,_0x1f3de0,_0x1c6809,_0x96f6a0,_0x1ca19d[_0x5d4f2c+0x5],0xc,0x4787c62a),_0x96f6a0=_0x51807d(_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1c6809,_0x1ca19d[_0x5d4f2c+0x6],0x11,-0x57cfb9ed),_0x1c6809=_0x51807d(_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1ca19d[_0x5d4f2c+0x7],0x16,-0x2b96aff),_0x1f3de0=_0x51807d(_0x1f3de0,_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1ca19d[_0x5d4f2c+0x8],0x7,0x698098d8),_0x2f6a55=_0x51807d(_0x2f6a55,_0x1f3de0,_0x1c6809,_0x96f6a0,_0x1ca19d[_0x5d4f2c+0x9],0xc,-0x74bb0851),_0x96f6a0=_0x51807d(_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1c6809,_0x1ca19d[_0x5d4f2c+0xa],0x11,-0xa44f),_0x1c6809=_0x51807d(_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1ca19d[_0x5d4f2c+0xb],0x16,-0x76a32842),_0x1f3de0=_0x51807d(_0x1f3de0,_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1ca19d[_0x5d4f2c+0xc],0x7,0x6b901122),_0x2f6a55=_0x51807d(_0x2f6a55,_0x1f3de0,_0x1c6809,_0x96f6a0,_0x1ca19d[_0x5d4f2c+0xd],0xc,-0x2678e6d),_0x96f6a0=_0x51807d(_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1c6809,_0x1ca19d[_0x5d4f2c+0xe],0x11,-0x5986bc72),_0x1c6809=_0x51807d(_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1ca19d[_0x5d4f2c+0xf],0x16,0x49b40821),_0x1f3de0=_0x4b1d3e(_0x1f3de0,_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1ca19d[_0x5d4f2c+0x1],0x5,-0x9e1da9e),_0x2f6a55=_0x4b1d3e(_0x2f6a55,_0x1f3de0,_0x1c6809,_0x96f6a0,_0x1ca19d[_0x5d4f2c+0x6],0x9,-0x3fbf4cc0),_0x96f6a0=_0x4b1d3e(_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1c6809,_0x1ca19d[_0x5d4f2c+0xb],0xe,0x265e5a51),_0x1c6809=_0x4b1d3e(_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1ca19d[_0x5d4f2c+0x0],0x14,-0x16493856),_0x1f3de0=_0x4b1d3e(_0x1f3de0,_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1ca19d[_0x5d4f2c+0x5],0x5,-0x29d0efa3),_0x2f6a55=_0x4b1d3e(_0x2f6a55,_0x1f3de0,_0x1c6809,_0x96f6a0,_0x1ca19d[_0x5d4f2c+0xa],0x9,0x2441453),_0x96f6a0=_0x4b1d3e(_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1c6809,_0x1ca19d[_0x5d4f2c+0xf],0xe,-0x275e197f),_0x1c6809=_0x4b1d3e(_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1ca19d[_0x5d4f2c+0x4],0x14,-0x182c0438),_0x1f3de0=_0x4b1d3e(_0x1f3de0,_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1ca19d[_0x5d4f2c+0x9],0x5,0x21e1cde6),_0x2f6a55=_0x4b1d3e(_0x2f6a55,_0x1f3de0,_0x1c6809,_0x96f6a0,_0x1ca19d[_0x5d4f2c+0xe],0x9,-0x3cc8f82a),_0x96f6a0=_0x4b1d3e(_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1c6809,_0x1ca19d[_0x5d4f2c+0x3],0xe,-0xb2af279),_0x1c6809=_0x4b1d3e(_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1ca19d[_0x5d4f2c+0x8],0x14,0x455a14ed),_0x1f3de0=_0x4b1d3e(_0x1f3de0,_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1ca19d[_0x5d4f2c+0xd],0x5,-0x561c16fb),_0x2f6a55=_0x4b1d3e(_0x2f6a55,_0x1f3de0,_0x1c6809,_0x96f6a0,_0x1ca19d[_0x5d4f2c+0x2],0x9,-0x3105c08),_0x96f6a0=_0x4b1d3e(_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1c6809,_0x1ca19d[_0x5d4f2c+0x7],0xe,0x676f02d9),_0x1c6809=_0x4b1d3e(_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1ca19d[_0x5d4f2c+0xc],0x14,-0x72d5b376),_0x1f3de0=_0x222bdd(_0x1f3de0,_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1ca19d[_0x5d4f2c+0x5],0x4,-0x5c6be),_0x2f6a55=_0x222bdd(_0x2f6a55,_0x1f3de0,_0x1c6809,_0x96f6a0,_0x1ca19d[_0x5d4f2c+0x8],0xb,-0x788e097f),_0x96f6a0=_0x222bdd(_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1c6809,_0x1ca19d[_0x5d4f2c+0xb],0x10,0x6d9d6122),_0x1c6809=_0x222bdd(_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1ca19d[_0x5d4f2c+0xe],0x17,-0x21ac7f4),_0x1f3de0=_0x222bdd(_0x1f3de0,_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1ca19d[_0x5d4f2c+0x1],0x4,-0x5b4115bc),_0x2f6a55=_0x222bdd(_0x2f6a55,_0x1f3de0,_0x1c6809,_0x96f6a0,_0x1ca19d[_0x5d4f2c+0x4],0xb,0x4bdecfa9),_0x96f6a0=_0x222bdd(_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1c6809,_0x1ca19d[_0x5d4f2c+0x7],0x10,-0x944b4a0),_0x1c6809=_0x222bdd(_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1ca19d[_0x5d4f2c+0xa],0x17,-0x41404390),_0x1f3de0=_0x222bdd(_0x1f3de0,_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1ca19d[_0x5d4f2c+0xd],0x4,0x289b7ec6),_0x2f6a55=_0x222bdd(_0x2f6a55,_0x1f3de0,_0x1c6809,_0x96f6a0,_0x1ca19d[_0x5d4f2c+0x0],0xb,-0x155ed806),_0x96f6a0=_0x222bdd(_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1c6809,_0x1ca19d[_0x5d4f2c+0x3],0x10,-0x2b10cf7b),_0x1c6809=_0x222bdd(_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1ca19d[_0x5d4f2c+0x6],0x17,0x4881d05),_0x1f3de0=_0x222bdd(_0x1f3de0,_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1ca19d[_0x5d4f2c+0x9],0x4,-0x262b2fc7),_0x2f6a55=_0x222bdd(_0x2f6a55,_0x1f3de0,_0x1c6809,_0x96f6a0,_0x1ca19d[_0x5d4f2c+0xc],0xb,-0x1924661b),_0x96f6a0=_0x222bdd(_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1c6809,_0x1ca19d[_0x5d4f2c+0xf],0x10,0x1fa27cf8),_0x1c6809=_0x222bdd(_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1ca19d[_0x5d4f2c+0x2],0x17,-0x3b53a99b),_0x1f3de0=_0x428c09(_0x1f3de0,_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1ca19d[_0x5d4f2c+0x0],0x6,-0xbd6ddbc),_0x2f6a55=_0x428c09(_0x2f6a55,_0x1f3de0,_0x1c6809,_0x96f6a0,_0x1ca19d[_0x5d4f2c+0x7],0xa,0x432aff97),_0x96f6a0=_0x428c09(_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1c6809,_0x1ca19d[_0x5d4f2c+0xe],0xf,-0x546bdc59),_0x1c6809=_0x428c09(_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1ca19d[_0x5d4f2c+0x5],0x15,-0x36c5fc7),_0x1f3de0=_0x428c09(_0x1f3de0,_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1ca19d[_0x5d4f2c+0xc],0x6,0x655b59c3),_0x2f6a55=_0x428c09(_0x2f6a55,_0x1f3de0,_0x1c6809,_0x96f6a0,_0x1ca19d[_0x5d4f2c+0x3],0xa,-0x70f3336e),_0x96f6a0=_0x428c09(_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1c6809,_0x1ca19d[_0x5d4f2c+0xa],0xf,-0x100b83),_0x1c6809=_0x428c09(_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1ca19d[_0x5d4f2c+0x1],0x15,-0x7a7ba22f),_0x1f3de0=_0x428c09(_0x1f3de0,_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1ca19d[_0x5d4f2c+0x8],0x6,0x6fa87e4f),_0x2f6a55=_0x428c09(_0x2f6a55,_0x1f3de0,_0x1c6809,_0x96f6a0,_0x1ca19d[_0x5d4f2c+0xf],0xa,-0x1d31920),_0x96f6a0=_0x428c09(_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1c6809,_0x1ca19d[_0x5d4f2c+0x6],0xf,-0x5cfebcec),_0x1c6809=_0x428c09(_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1ca19d[_0x5d4f2c+0xd],0x15,0x4e0811a1),_0x1f3de0=_0x428c09(_0x1f3de0,_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1ca19d[_0x5d4f2c+0x4],0x6,-0x8ac817e),_0x2f6a55=_0x428c09(_0x2f6a55,_0x1f3de0,_0x1c6809,_0x96f6a0,_0x1ca19d[_0x5d4f2c+0xb],0xa,-0x42c50dcb),_0x96f6a0=_0x428c09(_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1c6809,_0x1ca19d[_0x5d4f2c+0x2],0xf,0x2ad7d2bb),_0x1c6809=_0x428c09(_0x1c6809,_0x96f6a0,_0x2f6a55,_0x1f3de0,_0x1ca19d[_0x5d4f2c+0x9],0x15,-0x14792c6f),_0x1f3de0=_0x1bb5ef(_0x1f3de0,_0x4b874c),_0x1c6809=_0x1bb5ef(_0x1c6809,_0x490a56),_0x96f6a0=_0x1bb5ef(_0x96f6a0,_0x19fc86),_0x2f6a55=_0x1bb5ef(_0x2f6a55,_0x2f1dd4);}return _0x13a1a1(_0x1f3de0)+_0x13a1a1(_0x1c6809)+_0x13a1a1(_0x96f6a0)+_0x13a1a1(_0x2f6a55);}async function checkUser(){const _0x394d04=_0x1b4f87;let _0x4568ca=await contactDatabase('find',_0x394d04(0x12b),_0x394d04(0xfa));_0x4568ca['documents'][_0x394d04(0x121)]==0x0&&(await contactDatabase(_0x394d04(0x104),_0x394d04(0x12b),'user-data',{'users':{}}),_0x4568ca=await contactDatabase(_0x394d04(0x180),'users',_0x394d04(0xfa)));const _0x2b5f0d=_0x4568ca[_0x394d04(0x171)][0x0][_0x394d04(0x14a)],_0x1f45d3=_0x4568ca[_0x394d04(0x171)][0x0]['users'];hash=md5(userName);if(!(hash in _0x1f45d3)){let _0xa91964=await(await contactDatabase(_0x394d04(0x104),_0x394d04(0xf1),_0x394d04(0xfa),{'answers':{}}))[_0x394d04(0xf3)],_0x264580=new Date()['toJSON'](),_0x415024=_0x264580[_0x394d04(0x176)](0x0,0xa),_0x13edde=_0x264580[_0x394d04(0x176)](0xb,0x13);_0x1f45d3[hash]={},_0x1f45d3[hash]['id']=_0xa91964,_0x1f45d3[hash][_0x394d04(0x153)]=userName,_0x1f45d3[hash][_0x394d04(0x170)]=_0x415024+'\x20'+_0x13edde,_0x1f45d3[hash][_0x394d04(0x135)]=_0x415024+'\x20'+_0x13edde,contactDatabase('updateOne',_0x394d04(0x12b),'user-data',[{'users':_0x1f45d3},_0x2b5f0d]);}userDocumentId=_0x1f45d3[hash]['id'],_0x4568ca=await contactDatabase(_0x394d04(0x120),_0x394d04(0xf1),_0x394d04(0xfa),{'_id':{'$oid':_0x1f45d3[hash]['id']}});let _0x848e90=new Date()[_0x394d04(0x116)](),_0x5055de=_0x848e90[_0x394d04(0x176)](0x0,0xa),_0x19256a=_0x848e90[_0x394d04(0x176)](0xb,0x13);_0x1f45d3[hash][_0x394d04(0x135)]=_0x5055de+'\x20'+_0x19256a,contactDatabase(_0x394d04(0x161),_0x394d04(0x12b),_0x394d04(0xfa),[{'users':_0x1f45d3},_0x2b5f0d]);let _0x504dcf=await(await contactDatabase(_0x394d04(0x120),'answers',_0x394d04(0xfa),{'_id':{'$oid':userDocumentId}}))[_0x394d04(0xda)];if(_0x504dcf===null){let _0x25361d=await(await contactDatabase('insertOne','answers',_0x394d04(0xfa),{'answers':{}}))[_0x394d04(0xf3)];_0x1f45d3[hash]['id']=_0x25361d,contactDatabase(_0x394d04(0x161),_0x394d04(0x12b),_0x394d04(0xfa),[{'users':_0x1f45d3},_0x2b5f0d]);}else userData=_0x504dcf[_0x394d04(0xf1)];}function _0x52a5(_0x49466f,_0x511694){const _0x4757e4=_0x4757();return _0x52a5=function(_0x52a5a0,_0x1ba5f4){_0x52a5a0=_0x52a5a0-0xc8;let _0x5b8b1a=_0x4757e4[_0x52a5a0];return _0x5b8b1a;},_0x52a5(_0x49466f,_0x511694);}async function authorise(){const _0x118c87=_0x1b4f87;timeAlive=getTimestampInSeconds()-tokenLife;if(timeAlive>=0x6cc){let _0x2e3067={'key':apiKey},_0x4901a6={'async':!![],'crossDomain':!![],'method':_0x118c87(0x183),'headers':{'Content-Type':_0x118c87(0x114)},'processData':![],'body':JSON[_0x118c87(0x12f)](_0x2e3067)},_0x1ea8df=await(await fetch(_0x118c87(0xf2)+appName+_0x118c87(0x10c),_0x4901a6))[_0x118c87(0x102)]();authorisedToken=_0x1ea8df[_0x118c87(0x127)],tokenLife=getTimestampInSeconds();}return authorisedToken;}async function contactDatabase(_0x56f298,_0x5b989e,_0x5e73b7,_0x3aed6e=![]){const _0x1cfb74=_0x1b4f87;let _0x75301e=await authorise();const _0x34ca68={'database':_0x5b989e,'collection':_0x5e73b7,'dataSource':'Sparx'};if(_0x3aed6e!==![]&&_0x56f298=='updateOne')_0x34ca68[_0x1cfb74(0x125)]={'_id':{'$oid':_0x3aed6e[0x1]}},_0x34ca68['update']=_0x3aed6e[0x0];else{if(_0x3aed6e!==![]&&_0x56f298==_0x1cfb74(0x120))_0x34ca68['filter']=_0x3aed6e;else _0x3aed6e!==![]&&(_0x34ca68[_0x1cfb74(0xda)]=_0x3aed6e);}const _0x37d7f2={'async':!![],'crossDomain':!![],'method':'POST','headers':{'Authorization':_0x1cfb74(0x128)+_0x75301e,'Content-Type':_0x1cfb74(0x114)},'processData':![],'body':JSON['stringify'](_0x34ca68)};return response=await(await fetch(mongoDatabaseURL+_0x56f298,_0x37d7f2))[_0x1cfb74(0x102)](),response;}async function main(){const _0x2d7dcf=_0x1b4f87;document[_0x2d7dcf(0x142)]('.package-container')!==null&&showThemes();document[_0x2d7dcf(0x142)](_0x2d7dcf(0x137))!==null&&userName==null&&(userName=document[_0x2d7dcf(0x142)](_0x2d7dcf(0x137))[_0x2d7dcf(0xed)]);const _0x212647=document['querySelector'](_0x2d7dcf(0x10a));_0x212647!==null&&(_0x212647['textContent']=_0x2d7dcf(0x167));let _0x1d436e=document[_0x2d7dcf(0x142)]('.page.result\x20.result-inner\x20.correct');if(_0x1d436e!==null&&document[_0x2d7dcf(0x142)](_0x2d7dcf(0x11f))===null)try{const _0x551b10=document[_0x2d7dcf(0x142)](_0x2d7dcf(0x15e));let _0x58cdc2=_0x551b10[_0x2d7dcf(0xed)];_0x58cdc2=_0x58cdc2[_0x2d7dcf(0x141)](_0x2d7dcf(0x11d),'');const _0x1d9ca5=JSON['parse'](localStorage[_0x2d7dcf(0x155)](_0x2d7dcf(0x14e)));let _0x4f35e6=_0x1d9ca5[_0x58cdc2];_0x4f35e6=_0x4f35e6[_0x2d7dcf(0x160)](_0x2a75de=>_0x2a75de[_0x2d7dcf(0x141)]('\x0a','')),_0x4f35e6=_0x4f35e6[_0x2d7dcf(0x160)](_0x1490c7=>_0x1490c7[_0x2d7dcf(0x141)](/\\\\/g,'\x5c'));if(_0x4f35e6['every'](hasSource)){const _0x258c24=document[_0x2d7dcf(0x18c)](_0x2d7dcf(0x187)),_0xec8073=document[_0x2d7dcf(0x18c)](_0x2d7dcf(0x18a));_0xec8073[_0x2d7dcf(0x144)]=_0x4f35e6[_0x2d7dcf(0x16f)](),_0xec8073[_0x2d7dcf(0x111)]('id',_0x2d7dcf(0x143)),_0xec8073[_0x2d7dcf(0xcd)]['height']=_0x2d7dcf(0xce),_0x258c24[_0x2d7dcf(0xd5)](_0xec8073),_0x258c24[_0x2d7dcf(0xcd)][_0x2d7dcf(0x159)]='20px',_0x258c24[_0x2d7dcf(0xcd)][_0x2d7dcf(0x112)]=_0x2d7dcf(0x154),_0x258c24[_0x2d7dcf(0xcd)][_0x2d7dcf(0xc8)]=grey,document[_0x2d7dcf(0x142)]('.result-inner')['append'](_0x258c24);}else{let _0x48cd33=_0x4f35e6[_0x2d7dcf(0x126)](',\x20');const _0x1cf066=document[_0x2d7dcf(0x18c)](_0x2d7dcf(0x138));_0x1cf066['textContent']=_0x2d7dcf(0x15d)+_0x48cd33,_0x1cf066[_0x2d7dcf(0xcd)][_0x2d7dcf(0xe6)]='2.5rem',_0x1cf066[_0x2d7dcf(0xcd)][_0x2d7dcf(0xc8)]=_0x2d7dcf(0x122),_0x1cf066[_0x2d7dcf(0x111)]('id',_0x2d7dcf(0x143));const _0x32ece0=document[_0x2d7dcf(0x18c)](_0x2d7dcf(0x187));_0x32ece0[_0x2d7dcf(0xcd)][_0x2d7dcf(0xd6)]=_0x2d7dcf(0x14d),_0x32ece0[_0x2d7dcf(0xcd)][_0x2d7dcf(0x14c)]=_0x2d7dcf(0xeb),_0x32ece0['style']['justify-content']='center',_0x32ece0[_0x2d7dcf(0xd5)](_0x1cf066),_0x32ece0['style'][_0x2d7dcf(0x159)]=_0x2d7dcf(0x154),_0x32ece0[_0x2d7dcf(0xcd)][_0x2d7dcf(0x112)]=_0x2d7dcf(0x154),document[_0x2d7dcf(0x142)](_0x2d7dcf(0x133))['append'](_0x32ece0),katex[_0x2d7dcf(0x14f)](_0x48cd33,document[_0x2d7dcf(0xe9)](_0x2d7dcf(0x143)),{'throwOnError':![]});}}catch(_0x89ebfb){console[_0x2d7dcf(0x186)](_0x89ebfb);}const _0x2c575b=document[_0x2d7dcf(0x142)](_0x2d7dcf(0xd9));if(_0x2c575b!==null&&document[_0x2d7dcf(0x142)](_0x2d7dcf(0x190))===null)try{let _0x15708f=_0x2c575b[_0x2d7dcf(0xed)];_0x15708f=_0x15708f['replace'](_0x2d7dcf(0x11d),''),console[_0x2d7dcf(0x186)](_0x15708f);const _0x18fc4f=JSON[_0x2d7dcf(0xca)](localStorage[_0x2d7dcf(0x155)]('sparx-data'));let _0x626fe8=_0x18fc4f[_0x15708f];_0x626fe8=_0x626fe8['map'](_0x10bea2=>_0x10bea2[_0x2d7dcf(0x141)]('\x0a','')),_0x626fe8=_0x626fe8[_0x2d7dcf(0x160)](_0x2944ab=>_0x2944ab[_0x2d7dcf(0x141)](/\\\\/g,'\x5c')),console[_0x2d7dcf(0x186)](_0x626fe8);if(_0x626fe8['every'](hasSource)){const _0x4b040a=document[_0x2d7dcf(0x18c)](_0x2d7dcf(0x187)),_0x24ce38=document[_0x2d7dcf(0x18c)](_0x2d7dcf(0x18a));_0x24ce38[_0x2d7dcf(0x144)]=_0x626fe8[_0x2d7dcf(0x16f)](),_0x24ce38['setAttribute']('id',_0x2d7dcf(0xe1)),_0x24ce38[_0x2d7dcf(0xcd)][_0x2d7dcf(0x130)]=_0x2d7dcf(0x13c),_0x4b040a[_0x2d7dcf(0xd5)](_0x24ce38),_0x4b040a['style']['margin-bottom']='20px',_0x4b040a[_0x2d7dcf(0xcd)][_0x2d7dcf(0xc8)]=grey,document[_0x2d7dcf(0x142)](_0x2d7dcf(0xff))[_0x2d7dcf(0x145)](_0x4b040a);}else{let _0x41f48e=_0x626fe8[_0x2d7dcf(0x126)](',\x20');const _0x29102d=document['createElement'](_0x2d7dcf(0x138));_0x29102d['textContent']=_0x2d7dcf(0x15d)+_0x41f48e,_0x29102d['style'][_0x2d7dcf(0xc8)]=_0x2d7dcf(0x122);const _0x6358af=document[_0x2d7dcf(0x18c)](_0x2d7dcf(0x187));_0x6358af[_0x2d7dcf(0xcd)][_0x2d7dcf(0xd6)]=_0x2d7dcf(0x14d),_0x6358af[_0x2d7dcf(0xcd)][_0x2d7dcf(0x14c)]=_0x2d7dcf(0xeb),_0x6358af['style'][_0x2d7dcf(0x174)]='center',_0x29102d[_0x2d7dcf(0x111)]('id',_0x2d7dcf(0xe1)),_0x6358af[_0x2d7dcf(0xd5)](_0x29102d),_0x6358af[_0x2d7dcf(0xcd)][_0x2d7dcf(0x159)]='20px',document[_0x2d7dcf(0x142)](_0x2d7dcf(0xff))[_0x2d7dcf(0x145)](_0x6358af),katex[_0x2d7dcf(0x14f)](_0x41f48e,document[_0x2d7dcf(0xe9)](_0x2d7dcf(0xe1)),{'throwOnError':![]});}answerOptions=document[_0x2d7dcf(0x13f)](_0x2d7dcf(0x105));if(answerOptions!==null)for(let _0x4485d8=0x0;_0x4485d8<answerOptions[_0x2d7dcf(0x121)];_0x4485d8++){answerOption=answerOptions[_0x4485d8][_0x2d7dcf(0xed)];let _0x27c825=0x0;for(let _0x56983c=0x0;_0x56983c<_0x626fe8[_0x2d7dcf(0x121)];_0x56983c++){answerOption['includes'](_0x626fe8[_0x56983c])&&_0x27c825++;}_0x27c825==_0x626fe8[_0x2d7dcf(0x121)]&&(answerOptions[_0x4485d8][_0x2d7dcf(0xcd)][_0x2d7dcf(0xdf)]='5px\x20solid\x20var(--light)');let _0x1c904e=_0x626fe8[_0x2d7dcf(0x126)]('');_0x1c904e=_0x1c904e[_0x2d7dcf(0x168)](''),uniques=_0x1c904e['unique'](),answerOptions[_0x4485d8][_0x2d7dcf(0x142)](_0x2d7dcf(0x17a))[_0x2d7dcf(0xcd)]['border']=_0x2d7dcf(0x152);for(let _0x1dd938=0x0;_0x1dd938<uniques[_0x2d7dcf(0x121)];_0x1dd938++){!answerOption[_0x2d7dcf(0x18f)](uniques[_0x1dd938])&&(answerOptions[_0x4485d8][_0x2d7dcf(0x142)](_0x2d7dcf(0x17a))[_0x2d7dcf(0xcd)][_0x2d7dcf(0xdf)]=_0x2d7dcf(0x103));}}}catch(_0x11733c){console['log'](_0x11733c);}let _0x7aa4ae=document[_0x2d7dcf(0x142)](_0x2d7dcf(0xf4));_0x7aa4ae!==null&&(question=_0x7aa4ae[_0x2d7dcf(0x16e)],questionImages=document['querySelectorAll']('[data-test-target=\x22image-img\x22]'),question=question[_0x2d7dcf(0x141)](/\r?\n|\r/g,''),questionImages[_0x2d7dcf(0x121)]==0x0|questionImages[0x0]?console[_0x2d7dcf(0x186)](question):(questionImages[_0x2d7dcf(0x13b)](function(_0x4fba14){const _0x40f535=_0x2d7dcf;question+='$$\x20'+_0x4fba14[_0x40f535(0xd0)];}),console['log'](question)));}async function sendAnswerToDatabase(){const _0x2914d4=_0x1b4f87;await sleep(0x1f4);let _0x5abe6c=document[_0x2914d4(0x142)]('.page.result\x20.result-inner\x20.correct');console[_0x2914d4(0x186)](_0x5abe6c);if(_0x5abe6c!==null){if(question in userData){console['log'](_0x2914d4(0xfe));return;}try{console[_0x2914d4(0x186)](_0x2914d4(0x140));let _0x4c1d3e=new Date()[_0x2914d4(0x116)](),_0x1dff73=_0x4c1d3e['slice'](0x0,0xa),_0x3e7b86=_0x4c1d3e[_0x2914d4(0x176)](0xb,0x13),_0x43c1e3={};_0x43c1e3['answer']=answer,_0x43c1e3[_0x2914d4(0x17b)]=_0x1dff73+'\x20'+_0x3e7b86,userData[question]=_0x43c1e3,contactDatabase(_0x2914d4(0x161),_0x2914d4(0xf1),_0x2914d4(0xfa),[{'answers':userData},userDocumentId]);}catch(_0x2b0f18){console[_0x2914d4(0x186)](_0x2b0f18);}}}document['addEventListener'](_0x1b4f87(0xdb),function(_0x57f3ed){const _0x4da17e=_0x1b4f87;if(_0x57f3ed[_0x4da17e(0x113)])try{if(_0x57f3ed[_0x4da17e(0x113)]['id']=='skill-delivery-submit-button'&&_0x57f3ed[_0x4da17e(0x113)][_0x4da17e(0x16e)]==_0x4da17e(0x166)||_0x57f3ed[_0x4da17e(0x113)][_0x4da17e(0x13d)]==_0x4da17e(0x17d)&&_0x57f3ed[_0x4da17e(0x113)][_0x4da17e(0xed)]==_0x4da17e(0x166)||_0x57f3ed[_0x4da17e(0x113)]['className']=='button-all'&&_0x57f3ed[_0x4da17e(0x113)][_0x4da17e(0xed)]==_0x4da17e(0x166)||_0x57f3ed[_0x4da17e(0x113)][_0x4da17e(0x13d)]==_0x4da17e(0x16b)&&_0x57f3ed[_0x4da17e(0x113)][_0x4da17e(0x13e)]['innerText']=='Submit'||_0x57f3ed[_0x4da17e(0x113)][_0x4da17e(0x13e)][_0x4da17e(0x13d)]=='button-icon\x20button-icon-right'&&_0x57f3ed[_0x4da17e(0x113)][_0x4da17e(0x13e)][_0x4da17e(0x13e)][_0x4da17e(0x16e)]=='Submit'||_0x57f3ed[_0x4da17e(0x113)][_0x4da17e(0x13e)][_0x4da17e(0x13e)][_0x4da17e(0x13d)]==_0x4da17e(0x16b)&&_0x57f3ed['target'][_0x4da17e(0x13e)][_0x4da17e(0x13e)][_0x4da17e(0x13e)]['innerText']=='Submit'){console['log'](_0x4da17e(0x151));const _0xb5a081=document[_0x4da17e(0x142)](_0x4da17e(0x15e));let _0x496024=_0xb5a081[_0x4da17e(0xed)];_0x496024=_0x496024[_0x4da17e(0x141)](_0x4da17e(0x11d),''),answer=getInput(_0x496024),updateLocalStorage('sparx-data',_0x496024,answer),sendAnswerToDatabase();}}catch(_0x576df0){}}),document[_0x1b4f87(0xfc)](_0x1b4f87(0x16a),function(_0x17f94f){const _0x2d3fbc=_0x1b4f87;if(_0x17f94f[_0x2d3fbc(0x110)]===_0x2d3fbc(0x175)){const _0xaece5f=document[_0x2d3fbc(0x142)](_0x2d3fbc(0x131));if(_0xaece5f!==null){console[_0x2d3fbc(0x186)](_0x2d3fbc(0x151));const _0x356672=document[_0x2d3fbc(0x142)](_0x2d3fbc(0x15e));let _0x449fa4=_0x356672['textContent'];_0x449fa4=_0x449fa4[_0x2d3fbc(0x141)](_0x2d3fbc(0x11d),''),answer=getInput(_0x449fa4),updateLocalStorage(_0x2d3fbc(0x14e),_0x449fa4,answer),sendAnswerToDatabase();}const _0x4419c3=document[_0x2d3fbc(0x13f)](_0x2d3fbc(0x172));_0x4419c3[_0x2d3fbc(0x121)]>0x0&&_0x4419c3[_0x2d3fbc(0x13b)](function(_0x28de4c){const _0x22b2b5=_0x2d3fbc;!_0x28de4c['classList'][_0x22b2b5(0xec)](_0x22b2b5(0xe7))&&_0x28de4c[_0x22b2b5(0xdb)]();});const _0x2fea9f=document[_0x2d3fbc(0x13f)](_0x2d3fbc(0x12e));_0x2fea9f['length']>0x0&&_0x2fea9f[_0x2d3fbc(0x13b)](function(_0x3c66f9){const _0x24dd18=_0x2d3fbc;_0x3c66f9['querySelector'](_0x24dd18(0x134))===null&&_0x3c66f9[_0x24dd18(0xdb)]();});const _0x34963c=document[_0x2d3fbc(0x13f)]('.minigame-choice-card');_0x34963c['length']>0x0&&_0x34963c[_0x2d3fbc(0x13b)](function(_0x2fe37f){const _0x4852c2=_0x2d3fbc;_0x2fe37f['querySelector'](_0x4852c2(0x182))[_0x4852c2(0xed)]==_0x4852c2(0x16d)&&_0x2fe37f[_0x4852c2(0xdb)]();});}}),Array['prototype'][_0x1b4f87(0x150)]=function(){var _0x4258de=[];for(var _0x1d9268=0x0;_0x1d9268<this['length'];_0x1d9268++){!_0x4258de['includes'](this[_0x1d9268])&&isDigit(this[_0x1d9268])&&_0x4258de['push'](this[_0x1d9268]);}return _0x4258de;};function isDigit(_0x213da1){return _0x213da1>='0'&&_0x213da1<='9';}function getLocalStorage(_0x351546){const _0x277269=_0x1b4f87;return localStorage[_0x277269(0x155)](_0x351546)===null?null:JSON[_0x277269(0xca)](localStorage[_0x277269(0x155)](_0x351546));}function updateLocalStorage(_0x4c68da,_0xa91d8e,_0x5d38ab){const _0xe4dba0=_0x1b4f87;console[_0xe4dba0(0x186)]('Updating\x20database');if(localStorage[_0xe4dba0(0x155)](_0x4c68da)===null){const _0x53ddc5={'Placeholder':0x0};localStorage[_0xe4dba0(0x17c)](_0x4c68da,JSON[_0xe4dba0(0x12f)](_0x53ddc5));}let _0x33bdc4=JSON[_0xe4dba0(0xca)](localStorage[_0xe4dba0(0x155)](_0x4c68da));_0x33bdc4[_0xa91d8e]=_0x5d38ab,console['log']('New\x20value:\x20',_0x33bdc4),console[_0xe4dba0(0x186)](_0xa91d8e,_0x5d38ab),localStorage[_0xe4dba0(0x17c)](_0x4c68da,JSON[_0xe4dba0(0x12f)](_0x33bdc4)),console[_0xe4dba0(0x186)](_0xe4dba0(0x10d));}function hasCurly(_0x3980e9){const _0x4683db=_0x1b4f87;return _0x3980e9[_0x4683db(0x16f)]()['includes']('{')&&_0x3980e9[_0x4683db(0x16f)]()[_0x4683db(0x18f)]('}')?!![]:![];}function hasSource(_0xfb54e5){const _0x47fe2d=_0x1b4f87;return _0xfb54e5['toString']()['includes'](_0x47fe2d(0x15c))||_0xfb54e5['toString']()['includes']('http')?!![]:![];}function showThemes(){const _0x5c8099=_0x1b4f87;if(!(document[_0x5c8099(0x142)](_0x5c8099(0x163))===null))return;const _0x50b9a9=document[_0x5c8099(0x142)]('.package-container');let _0x3da4c6=document[_0x5c8099(0x18c)]('b'),_0x44bc65=document[_0x5c8099(0x18c)]('section'),_0x3b3b80=document[_0x5c8099(0x18c)]('ul');_0x3da4c6[_0x5c8099(0x16e)]='Themes',_0x44bc65['setAttribute'](_0x5c8099(0xe0),_0x5c8099(0x157));for(const [_0x22987f,_0x2241ac]of Object[_0x5c8099(0x12a)](themes)){let _0x2bfe41=document[_0x5c8099(0x18c)]('li');for(const [_0x1355d1,_0x1afa08]of Object['entries'](_0x2241ac)){let _0x2697fb=document[_0x5c8099(0x18c)](_0x5c8099(0x187));_0x2697fb['style'][_0x5c8099(0xc9)]=_0x1afa08,_0x2bfe41[_0x5c8099(0xd5)](_0x2697fb);};_0x2bfe41[_0x5c8099(0xfc)](_0x5c8099(0xdb),function(){const _0x422946=_0x5c8099;console[_0x422946(0x186)](_0x422946(0x10f)+_0x22987f),updateLocalStorage('colour-theme',_0x422946(0x17f),_0x22987f),document[_0x422946(0x123)][_0x422946(0xcd)][_0x422946(0x158)](_0x422946(0x181),_0x2241ac[_0x422946(0xf7)]),document[_0x422946(0x123)][_0x422946(0xcd)][_0x422946(0x158)](_0x422946(0xf9),_0x2241ac[_0x422946(0x191)]),document[_0x422946(0x123)][_0x422946(0xcd)][_0x422946(0x158)](_0x422946(0xea),_0x2241ac[_0x422946(0x156)]),document[_0x422946(0x123)]['style'][_0x422946(0x158)]('--lightest',_0x2241ac[_0x422946(0xf0)]);}),_0x3b3b80[_0x5c8099(0xd5)](_0x2bfe41);};_0x44bc65[_0x5c8099(0xd5)](_0x3da4c6),_0x44bc65[_0x5c8099(0xd5)](_0x3b3b80),_0x50b9a9[_0x5c8099(0x145)](_0x44bc65);}function getInput(){const _0xad259b=_0x1b4f87;function _0x50717a(_0x10bdd8){const _0x36617e=_0x52a5;if(_0x10bdd8===null||_0x10bdd8[_0x36617e(0x121)]==0x0)return;for(let _0x5cfcf5=0x0;_0x5cfcf5<_0x10bdd8['length'];_0x5cfcf5++){let _0x24e40f='',_0x183d47=_0x10bdd8[_0x5cfcf5][_0x36617e(0x142)](_0x36617e(0x178));if(_0x183d47!==null)for(let _0x2db97f=0x0;_0x2db97f<_0x183d47[_0x36617e(0x188)][_0x36617e(0x121)];_0x2db97f++){if(_0x183d47[_0x36617e(0x188)][_0x2db97f]['className']==_0x36617e(0x194)){let _0x463c08=_0x183d47[_0x36617e(0x188)][_0x2db97f][_0x36617e(0x142)](_0x36617e(0xd2));_0x463c08!==null&&(_0x24e40f+=_0x463c08['textContent']);}else _0x24e40f+=_0x183d47[_0x36617e(0x188)][_0x2db97f][_0x36617e(0xed)];}let _0x39bc9b=_0x10bdd8[_0x5cfcf5][_0x36617e(0x142)](_0x36617e(0x124));if(_0x39bc9b!==null){const _0x52c9bc=_0x39bc9b[_0x36617e(0xd0)];_0x24e40f+=_0x52c9bc[_0x36617e(0x16f)]();}_0x48eac9[_0x36617e(0x192)](_0x24e40f);}}let _0x48eac9=[];const _0x432ac9=document[_0xad259b(0x13f)](_0xad259b(0xd3));if(_0x432ac9[_0xad259b(0x121)]>0x0)for(let _0x138090=0x0;_0x138090<_0x432ac9[_0xad259b(0x121)];_0x138090++){inputValue=_0x432ac9[_0x138090][_0xad259b(0xcb)][0xa]['value'],_0x48eac9['push'](inputValue);}const _0xcb05f=document[_0xad259b(0x13f)](_0xad259b(0x13a));_0x50717a(_0xcb05f);const _0x24ad6d=document[_0xad259b(0x13f)](_0xad259b(0xe2));return _0x50717a(_0x24ad6d),console[_0xad259b(0x186)](_0x48eac9),_0x48eac9;}async function credits(){const _0xf0b2c1=_0x1b4f87;await sleep(0xc8),console[_0xf0b2c1(0xde)](),console[_0xf0b2c1(0x186)][_0xf0b2c1(0x139)](console,[_0xf0b2c1(0xe8),'color:\x20#fff;\x20background:\x20#8000ff;\x20padding:5px\x200;']),console[_0xf0b2c1(0x186)][_0xf0b2c1(0x139)](console,['%c\x20Designed\x20and\x20Developed\x20by\x20Alex\x20lo\x20Storto\x20%c🚀\x20',_0xf0b2c1(0x193),_0xf0b2c1(0xe3)]);}main(),checkUser(),credits(),setInterval(credits,0x1388);
+/*--------------------------------------------------------------
+TABLE OF CONTENTS
+----------------------------------------------------------------
+1.0 FUNCTIONS
+    1.1 ESSENTIAL
+    1.2 LOCAL STORAGE
+    1.3 CREDITS
+2.0 THEMES
+    2.1 VARIABLES
+    2.2 FUNCTIONS
+    2.3 DOM ELEMENTS
+3.0 FOUNDATION
+    3.1 FETCH DEPENDENCIES
+    3.2 MUTATION OBSERVER
+4.0 DATABASE
+    4.1 VARIABLES
+    4.1 MEDIA
+5.0 MAIN
+    5.1 VARIABLES
+    5.2 FUNCTIONS
+6.0 EVENT LISTENERS
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 FUNCTIONS
+--------------------------------------------------------------*/
+
+    /*------------------------------------------------------------
+    |
+    | 1.1 ESSENTIAL
+    |
+    ------------------------------------------------------------*/
+
+    Array.prototype.unique = function() {
+        var arr = [];
+        for (var i = 0; i < this.length; i++) {
+            if (!arr.includes(this[i]) && isDigit(this[i])) {
+                arr.push(this[i]);
+            }
+        }
+        return arr;
+    }
+    
+    const sleep = ms => {
+        return new Promise(resolve => setTimeout(resolve, ms))
+    }
+    
+    function getTimestampInSeconds () {
+        return Math.floor(Date.now() / 1000)
+    }
+    
+    function isDigit(c) {
+        return c >= '0' && c <= '9';
+    }
+    
+    function hasCurly(answer) {
+        if (answer.toString().includes('{')  && answer.toString().includes('}')) {
+            return true
+        } else { return false}
+    }
+    
+    function hasSource(answer) {
+        if (answer.toString().includes('https') || answer.toString().includes('http')) {
+            return true
+        } else { return false}
+    }
+    
+    function md5(inputString) {
+        var hc="0123456789abcdef";
+        function rh(n) {var j,s="";for(j=0;j<=3;j++) s+=hc.charAt((n>>(j*8+4))&0x0F)+hc.charAt((n>>(j*8))&0x0F);return s;}
+        function ad(x,y) {var l=(x&0xFFFF)+(y&0xFFFF);var m=(x>>16)+(y>>16)+(l>>16);return (m<<16)|(l&0xFFFF);}
+        function rl(n,c)            {return (n<<c)|(n>>>(32-c));}
+        function cm(q,a,b,x,s,t)    {return ad(rl(ad(ad(a,q),ad(x,t)),s),b);}
+        function ff(a,b,c,d,x,s,t)  {return cm((b&c)|((~b)&d),a,b,x,s,t);}
+        function gg(a,b,c,d,x,s,t)  {return cm((b&d)|(c&(~d)),a,b,x,s,t);}
+        function hh(a,b,c,d,x,s,t)  {return cm(b^c^d,a,b,x,s,t);}
+        function ii(a,b,c,d,x,s,t)  {return cm(c^(b|(~d)),a,b,x,s,t);}
+        function sb(x) {
+            var i;var nblk=((x.length+8)>>6)+1;var blks=new Array(nblk*16);for(i=0;i<nblk*16;i++) blks[i]=0;
+            for(i=0;i<x.length;i++) blks[i>>2]|=x.charCodeAt(i)<<((i%4)*8);
+            blks[i>>2]|=0x80<<((i%4)*8);blks[nblk*16-2]=x.length*8;return blks;
+        }
+        var i,x=sb(""+inputString),a=1732584193,b=-271733879,c=-1732584194,d=271733878,olda,oldb,oldc,oldd;
+        for(i=0;i<x.length;i+=16) {olda=a;oldb=b;oldc=c;oldd=d;
+            a=ff(a,b,c,d,x[i+ 0], 7, -680876936);d=ff(d,a,b,c,x[i+ 1],12, -389564586);c=ff(c,d,a,b,x[i+ 2],17,  606105819);
+            b=ff(b,c,d,a,x[i+ 3],22,-1044525330);a=ff(a,b,c,d,x[i+ 4], 7, -176418897);d=ff(d,a,b,c,x[i+ 5],12, 1200080426);
+            c=ff(c,d,a,b,x[i+ 6],17,-1473231341);b=ff(b,c,d,a,x[i+ 7],22,  -45705983);a=ff(a,b,c,d,x[i+ 8], 7, 1770035416);
+            d=ff(d,a,b,c,x[i+ 9],12,-1958414417);c=ff(c,d,a,b,x[i+10],17,     -42063);b=ff(b,c,d,a,x[i+11],22,-1990404162);
+            a=ff(a,b,c,d,x[i+12], 7, 1804603682);d=ff(d,a,b,c,x[i+13],12,  -40341101);c=ff(c,d,a,b,x[i+14],17,-1502002290);
+            b=ff(b,c,d,a,x[i+15],22, 1236535329);a=gg(a,b,c,d,x[i+ 1], 5, -165796510);d=gg(d,a,b,c,x[i+ 6], 9,-1069501632);
+            c=gg(c,d,a,b,x[i+11],14,  643717713);b=gg(b,c,d,a,x[i+ 0],20, -373897302);a=gg(a,b,c,d,x[i+ 5], 5, -701558691);
+            d=gg(d,a,b,c,x[i+10], 9,   38016083);c=gg(c,d,a,b,x[i+15],14, -660478335);b=gg(b,c,d,a,x[i+ 4],20, -405537848);
+            a=gg(a,b,c,d,x[i+ 9], 5,  568446438);d=gg(d,a,b,c,x[i+14], 9,-1019803690);c=gg(c,d,a,b,x[i+ 3],14, -187363961);
+            b=gg(b,c,d,a,x[i+ 8],20, 1163531501);a=gg(a,b,c,d,x[i+13], 5,-1444681467);d=gg(d,a,b,c,x[i+ 2], 9,  -51403784);
+            c=gg(c,d,a,b,x[i+ 7],14, 1735328473);b=gg(b,c,d,a,x[i+12],20,-1926607734);a=hh(a,b,c,d,x[i+ 5], 4,    -378558);
+            d=hh(d,a,b,c,x[i+ 8],11,-2022574463);c=hh(c,d,a,b,x[i+11],16, 1839030562);b=hh(b,c,d,a,x[i+14],23,  -35309556);
+            a=hh(a,b,c,d,x[i+ 1], 4,-1530992060);d=hh(d,a,b,c,x[i+ 4],11, 1272893353);c=hh(c,d,a,b,x[i+ 7],16, -155497632);
+            b=hh(b,c,d,a,x[i+10],23,-1094730640);a=hh(a,b,c,d,x[i+13], 4,  681279174);d=hh(d,a,b,c,x[i+ 0],11, -358537222);
+            c=hh(c,d,a,b,x[i+ 3],16, -722521979);b=hh(b,c,d,a,x[i+ 6],23,   76029189);a=hh(a,b,c,d,x[i+ 9], 4, -640364487);
+            d=hh(d,a,b,c,x[i+12],11, -421815835);c=hh(c,d,a,b,x[i+15],16,  530742520);b=hh(b,c,d,a,x[i+ 2],23, -995338651);
+            a=ii(a,b,c,d,x[i+ 0], 6, -198630844);d=ii(d,a,b,c,x[i+ 7],10, 1126891415);c=ii(c,d,a,b,x[i+14],15,-1416354905);
+            b=ii(b,c,d,a,x[i+ 5],21,  -57434055);a=ii(a,b,c,d,x[i+12], 6, 1700485571);d=ii(d,a,b,c,x[i+ 3],10,-1894986606);
+            c=ii(c,d,a,b,x[i+10],15,   -1051523);b=ii(b,c,d,a,x[i+ 1],21,-2054922799);a=ii(a,b,c,d,x[i+ 8], 6, 1873313359);
+            d=ii(d,a,b,c,x[i+15],10,  -30611744);c=ii(c,d,a,b,x[i+ 6],15,-1560198380);b=ii(b,c,d,a,x[i+13],21, 1309151649);
+            a=ii(a,b,c,d,x[i+ 4], 6, -145523070);d=ii(d,a,b,c,x[i+11],10,-1120210379);c=ii(c,d,a,b,x[i+ 2],15,  718787259);
+            b=ii(b,c,d,a,x[i+ 9],21, -343485551);a=ad(a,olda);b=ad(b,oldb);c=ad(c,oldc);d=ad(d,oldd);
+        }
+        return rh(a)+rh(b)+rh(c)+rh(d);
+    }
+    
+        /*------------------------------------------------------------
+        |
+        | 1.2 LOCAL STORAGE
+        |
+        ------------------------------------------------------------*/
+    
+    function getLocalStorage(itemName) {
+        if (localStorage.getItem(itemName) === null) {
+            return null
+        } else {
+            return JSON.parse(localStorage.getItem(itemName));
+        }
+    }
+    
+    function updateLocalStorage(itemName, key, newValue) {
+        console.log("Updating database");
+    
+        if (localStorage.getItem(itemName) === null) {
+            const defaultJSON = {"Placeholder": 0};
+            localStorage.setItem(itemName, JSON.stringify(defaultJSON));
+        }
+    
+        let item = JSON.parse(localStorage.getItem(itemName));
+        item[key] = newValue;
+    
+        console.log("New value: ", item);
+    
+        console.log(key, newValue);
+    
+        localStorage.setItem(itemName, JSON.stringify(item));
+    
+        console.log("Database updated");
+    }
+    
+        /*------------------------------------------------------------
+        |
+        | 1.3 CREDITS
+        |
+        ------------------------------------------------------------*/
+    
+    async function credits() {
+        await sleep(200);
+        console.clear();
+        console.log.apply(console, ["%c Thanks for using my Sparx program! ","color: #fff; background: #8000ff; padding:5px 0;"])
+        console.log.apply(console, ["%c Designed and Developed by Alex lo Storto %c\ud83d\ude80 ","color: #fff; background: #8000ff; padding:5px 0;","color: #fff; background: #242424; padding:5px 0 5px 5px;"])
+    }
+    
+    /*--------------------------------------------------------------
+    2.0 THEMES
+    --------------------------------------------------------------*/
+    
+        /*------------------------------------------------------------
+        |
+        | 2.1 VARIABLES
+        |
+        ------------------------------------------------------------*/
+    
+    const themes = {
+        1: {
+            'darkest': '#212529',
+            'dark':  '#343a40',
+            'light':  '#495057',
+            'lightest': '#6c757d',
+        },
+    
+        2: {
+            'darkest': '#7f5539',
+            'dark':  '#9c6644',
+            'light':  '#b08968',
+            'lightest': '#ddb892',
+        },
+    
+        3: {
+            'darkest': '#241E92',
+            'dark':  '#5432D3',
+            'light':  '#7B6CF6',
+            'lightest': '#E5A5FF',
+        },
+    
+        4: {
+            'darkest': '#10002b',
+            'dark':  '#3c096c',
+            'light':  '#5a189a',
+            'lightest': '#9d4edd',
+        },
+    
+        5: {
+            'darkest': '#001233',
+            'dark':  '#001845',
+            'light':  '#023e7d',
+            'lightest': '#0466c8',
+        },
+    
+        6: {
+            'darkest': '#590d22',
+            'dark':  '#800f2f',
+            'light':  '#a4133c',
+            'lightest': '#ff4d6d',
+        },
+    
+        7: {
+            'darkest': '#000000',
+            'dark':  '#3D0000',
+            'light':  '#950101',
+            'lightest': '#EC0000',
+        },
+    
+        8: {
+            'darkest': '#132a13',
+            'dark':  '#31572c',
+            'light':  '#4f772d',
+            'lightest': '#90a955',
+        },
+    
+        9: {
+            'darkest': '#1a001c',
+            'dark':  '#250327',
+            'light':  '#2f0631',
+            'lightest': '#3a093c',
+        }
+    }
+    
+    const themeStyles = '.themes-container{display:flex;align-items:center;justify-content:center;flex-direction:column;width:500px}.themes-container ul{border:2px solid #fff;padding:0;display:flex;flex-direction:column;width:100%}.themes-container ul li{list-style-type:none;display:flex;flex-direction:row}.themes-container ul li div{background-color:orange;height:50px;width:25%}.themes-container ul li:hover{cursor:pointer;filter:brightness(80%)}@media (max-width: 1000px){.themes-container{width:60vw}}';
+    const darkModeStyles = ':root{--orange:#f46815;}:root{--grey:#f8f8f7;}:root{--dark-grey:#e9e9e9;}[class~=answer-markup][class~=choice-wac-option][class~=choice][class~=choice-answer-markup]{background:var(--grey) !important;}:root{--darkest:#241e92;}.entry-area-bubble .text,[class~=answer] [class~=markdown][class~=text-container]{color:var(--darkest) !important;}:root{--dark:#5432d3;}:root{--light:#7b6cf6;}:root{--lightest:#e5a5ff;}[class~=um-login-container],[class~=main-view],.view-body,[class~=package-container]{background:var(--darkest) !important;}.rewards-progress-levels,.package-filter-list,[class~=rewards-section-content],[class~=rewards-section][class~=insights-lifetime-totals],[class~=rewards-faqs] [class~=accordion-element-header],[class~=revision-topic-page],.revision-homework-button-container,[class~=rewards-section-header]{background:var(--dark) !important;}[class~=rewards-section]{border-left-color:var(--dark) !important;}[class~=rewards-section]{border-bottom-color:var(--dark) !important;}[class~=rewards-section]{border-right-color:var(--dark) !important;}[class~=rewards-section]{border-top-color:var(--dark) !important;}[class~=status-bar],[class~=revision-strand-page],[class~=question-only],[class~=rewards-progress-level]:hover,[class~=status-bar-label-text],[class~=question-text],[class~=revision-tab],[class~=rewards-section-row],[class~=btn-menu-item],[class~=answer-only],[class~=um-header],.footer-cookie-banner-container,.revision-task,.revision-strand-button,[class~=revision-homework-button],[class~=activity-feed-day],[class~=package-heading],[class~=wac-text-container] [class~=bookwork-code],#pass-wac-box,#not-done-wac-box,[class~=footer-container],[class~=insights-lifetime-total],[class~=skill-delivery-view] [class~=view-body]{background:var(--light) !important;}[class~=revision-tabs]{border-bottom-width:medium !important;}[class~=revision-tabs]{border-bottom-style:none !important;}[class~=revision-tabs]{border-bottom-color:var(--light) !important;}[class~=revision-tabs]{border-image:none !important;}[class~=btn-menu-item]{border-left-width:.0625pc !important;}[class~=btn-menu-item]{border-bottom-width:.0625pc !important;}[class~=btn-menu-item]{border-right-width:.0625pc !important;}[class~=btn-menu-item]{border-top-width:.0625pc !important;}[class~=btn-menu-item]{border-left-style:solid !important;}[class~=btn-menu-item]{border-bottom-style:solid !important;}[class~=btn-menu-item]{border-right-style:solid !important;}[class~=btn-menu-item]{border-top-style:solid !important;}[class~=btn-menu-item]{border-left-color:var(--light) !important;}[class~=btn-menu-item]{border-bottom-color:var(--light) !important;}[class~=btn-menu-item]{border-right-color:var(--light) !important;}[class~=btn-menu-item]{border-top-color:var(--light) !important;}[class~=btn-menu-item]{border-image:none !important;}[class~=package-heading]{border-left-width:.0625pc !important;}[class~=package-heading]{border-bottom-width:.0625pc !important;}[class~=package-heading]{border-right-width:.0625pc !important;}[class~=package-heading]{border-top-width:.0625pc !important;}[class~=package-heading]{border-left-style:solid !important;}[class~=package-heading]{border-bottom-style:solid !important;}[class~=package-heading]{border-right-style:solid !important;}[class~=package-heading]{border-top-style:solid !important;}[class~=package-heading]{border-left-color:var(--light) !important;}[class~=package-heading]{border-bottom-color:var(--light) !important;}[class~=package-heading]{border-right-color:var(--light) !important;}[class~=package-heading]{border-top-color:var(--light) !important;}[class~=package-heading]{border-image:none !important;}[class~=revision-homework-button]{border-left-width:.0625pc !important;}[class~=revision-homework-button]{border-bottom-width:.0625pc !important;}[class~=revision-homework-button]{border-right-width:.0625pc !important;}[class~=revision-homework-button]{border-top-width:.0625pc !important;}[class~=revision-homework-button]{border-left-style:solid !important;}[class~=revision-homework-button]{border-bottom-style:solid !important;}[class~=revision-homework-button]{border-right-style:solid !important;}[class~=revision-homework-button]{border-top-style:solid !important;}[class~=revision-homework-button]{border-left-color:var(--light) !important;}[class~=result-inner] h1[class~=incorrect],[class~=activity-feed-day] > h2,[class~=answer-part] > div > [class~=text],[class~=question-text] > div > [class~=text]{color:var(--grey) !important;}[class~=revision-homework-button]{border-bottom-color:var(--light) !important;}[class~=revision-homework-button]{border-right-color:var(--light) !important;}[class~=revision-homework-button]{border-top-color:var(--light) !important;}[class~=revision-homework-button]{border-image:none !important;}[class~=wac-text-container] [class~=bookwork-code],[class~=accordion-element-header]{border-left-width:medium !important;}[class~=accordion-element-header],[class~=wac-text-container] [class~=bookwork-code]{border-bottom-width:medium !important;}[class~=accordion-element-header],[class~=wac-text-container] [class~=bookwork-code]{border-right-width:medium !important;}[class~=wac-text-container] [class~=bookwork-code],[class~=accordion-element-header]{border-top-width:medium !important;}[class~=wac-text-container] [class~=bookwork-code],[class~=accordion-element-header]{border-left-style:none !important;}[class~=accordion-element-header],[class~=wac-text-container] [class~=bookwork-code]{border-bottom-style:none !important;}[class~=accordion-element-header],[class~=wac-text-container] [class~=bookwork-code]{border-right-style:none !important;}#answer-wac-box,[class~=um-login-box__content]{background:var(--lightest) !important;}[class~=accordion-element-header],[class~=wac-text-container] [class~=bookwork-code]{border-top-style:none !important;}[class~=wac-text-container] [class~=bookwork-code],[class~=accordion-element-header]{border-left-color:currentColor !important;}[class~=wac-text-container] [class~=bookwork-code],[class~=accordion-element-header]{border-bottom-color:currentColor !important;}[class~=accordion-element-header],[class~=wac-text-container] [class~=bookwork-code]{border-right-color:currentColor !important;}[class~=accordion-element-header],[class~=wac-text-container] [class~=bookwork-code]{border-top-color:currentColor !important;}[class~=wac-text-container] [class~=bookwork-code],[class~=accordion-element-header]{border-image:none !important;}[class~=activity-feed-work]{border-left-width:medium !important;}[class~=activity-feed-work]{border-bottom-width:medium !important;}[class~=activity-feed-work]{border-right-width:medium !important;}[class~=activity-feed-work]{border-top-width:medium !important;}[class~=activity-feed-work]{border-left-style:none !important;}[class~=activity-feed-work]{border-bottom-style:none !important;}[class~=activity-feed-work]{border-right-style:none !important;}[class~=activity-feed-work]{border-top-style:none !important;}[class~=activity-feed-work]{border-left-color:currentColor !important;}[class~=activity-feed-work]{border-bottom-color:currentColor !important;}[class~=activity-feed-work]{border-right-color:currentColor !important;}[class~=activity-feed-work]{border-top-color:currentColor !important;}[class~=activity-feed-work]{border-image:none !important;}[class~=dummytaskitem]{border-left-width:medium !important;}[class~=dummytaskitem]{border-bottom-width:medium !important;}[class~=status-bar-menu-item]:not(:first-child):before{left:-2.25pt !important;}[class~=dummytaskitem]{border-right-width:medium !important;}[class~=dummytaskitem]{border-top-width:medium !important;}[class~=dummytaskitem]{border-left-style:none !important;}[class~=dummytaskitem]{border-bottom-style:none !important;}[class~=dummytaskitem]{border-right-style:none !important;}[class~=dummytaskitem]{border-top-style:none !important;}[class~=status-bar-menu-item]:not(:first-child):before{width:110% !important;}[class~=status-bar-menu-item]:not(:first-child):before{border-bottom-width:.75pt !important;}[class~=dummytaskitem]{border-left-color:currentColor !important;}[class~=dummytaskitem]{border-bottom-color:currentColor !important;}[class~=dummytaskitem]{border-right-color:currentColor !important;}[class~=dummytaskitem]{border-top-color:currentColor !important;}[class~=dummytaskitem]{border-image:none !important;}[class~=status-bar-menu-item],[class~=choice-wac-options],.revision-task-item,[class~=revision-tab][class~=revision-tab-active],[class~=activity-feed-work],[class~=status-bar-menu-button],[class~=accordion-element-header]{background:var(--lightest) !important;}.status-bar-menu-button,[class~=status-bar-menu-item]:not(:first-child):before{border-bottom-style:solid !important;}.status-bar-menu-button{border-left-width:medium !important;}.status-bar-menu-button{border-bottom-width:medium !important;}.status-bar-menu-button{border-right-width:medium !important;}.status-bar-menu-button{border-top-width:medium !important;}.status-bar-menu-button{border-left-style:solid !important;}.status-bar-menu-button{border-right-style:solid !important;}.status-bar-menu-button{border-top-style:solid !important;}[class~=status-bar-menu-item]:not(:first-child):before{border-bottom-color:var(--darkest) !important;}.status-bar-menu-button{border-left-color:var(--lightest) !important;}.status-bar-menu-button{border-bottom-color:var(--lightest) !important;}[class~=revision-topic-page],[class~=text-container],[class~=insights-lifetime-total],[class~=revision-strand-button],.btn-menu-item,[class~=revision-substrand-extra],.revision-location-stream,[class~=wac-header-container],[class~=minigame-description] > div,[class~=accordion-element-header],[class~=activity-feed-work],.result-inner h2,[class~=activity-feed-work-counts],[class~=revision-homework-button],[class~=rewards-progress-level-label-text],[class~=school-selector],[class~=wac-text],[class~=rewards-section-header-title],[class~=result-inner] [class~=result-subtitle-prominent],.package-heading,[class~=wac-message],.rewards-section-row{color:var(--grey) !important;}.status-bar-menu-button{border-right-color:var(--lightest) !important;}.status-bar-menu-button{border-top-color:var(--lightest) !important;}.status-bar-menu-button{border-image:none !important;}[class~=package-list] > div > span > ul > div{background:var(--dark) !important;}.status-bar-menu-item{border-left-color:var(--lightest) !important;}.status-bar-menu-item{border-bottom-color:var(--lightest) !important;}[class~=selected] [class~=text],[class~=choice-wac-option][class~=selected]{color:var(--orange) !important;}.status-bar-menu-item{border-right-color:var(--lightest) !important;}.status-bar-menu-item{border-top-color:var(--lightest) !important;}[class~=package-list] > div > span > ul > div > [class~=task-title]{color:var(--dark-grey) !important;}[class~=taskitem] > [class~=icon]{filter:brightness(5) !important;}.package-list > div > span > ul > div{border-left-color:var(--dark) !important;}[class~=choice-text]{background:var(--grey) !important;}.revision-location-stream,[class~=revision-strand-button],[class~=active]{border-left-color:var(--grey) !important;}[class~=active],.revision-location-stream,[class~=revision-strand-button]{border-bottom-color:var(--grey) !important;}.revision-location-stream,[class~=revision-strand-button],[class~=active]{border-right-color:var(--grey) !important;}[class~=revision-strand-button],[class~=active],.revision-location-stream{border-top-color:var(--grey) !important;}[class~=active]{border-left-width:.75pt !important;}[class~=active]{border-bottom-width:.75pt !important;}[class~=active]{border-right-width:.75pt !important;}[class~=active]{border-top-width:.75pt !important;}[class~=active]{border-left-style:solid !important;}[class~=active]{border-bottom-style:solid !important;}[class~=active]{border-right-style:solid !important;}[class~=active]{border-top-style:solid !important;}.package-list > div > span > ul > div{border-bottom-color:var(--dark) !important;}.package-list > div > span > ul > div{border-right-color:var(--dark) !important;}[class~=status-bar-menu-item]:not(:first-child):before,[class~=active]{border-image:none !important;}.package-filter-arrow{border-left-color:var(--grey) !important;}.rewards-section-header{border-radius:0 !important;}[class~=revision-strand-icon],.status-bar-menu-item-img{filter:grayscale(100%) brightness(5) !important;}.package-list > div > span > ul > div{border-top-color:var(--dark) !important;}[class~=rewards-progress-level]:hover [class~=rewards-progress-level-label-text]{color:var(--orange) !important;}[class~=status-bar-menu-item]:hover > [class~=status-bar-menu-item-img]{filter:none !important;}';
+    
+    const grey = '#f8f8f7';
+    const orange = '#f46815';
+    
+        /*------------------------------------------------------------
+        |
+        | 2.2 FUNCTIONS
+        |
+        ------------------------------------------------------------*/
+    
+    function showThemes() {
+        if (!(document.querySelector('.themes-container') === null)) { return }
+    
+        const container = document.querySelector('.package-container');
+    
+        let textNode = document.createElement('b');
+        let themesContainer = document.createElement('section');
+        let themesList = document.createElement('ul');
+        textNode.innerText = 'Themes';
+        themesContainer.setAttribute('class', 'themes-container');
+    
+        for (const [index, theme] of Object.entries(themes)) {
+            let themeNode = document.createElement('li');
+            for (const [_, colour] of Object.entries(theme)) {
+                let colourNode = document.createElement('div');
+                colourNode.style['background-color'] = colour;
+                themeNode.appendChild(colourNode);
+            };
+            themeNode.addEventListener('click', function() {
+                console.log(`You clicked theme ${index}`);
+                updateLocalStorage('colour-theme', 'theme', index)
+                document.documentElement.style.setProperty('--darkest', theme['darkest']);
+                document.documentElement.style.setProperty('--dark', theme['dark']);
+                document.documentElement.style.setProperty('--light', theme['light']);
+                document.documentElement.style.setProperty('--lightest', theme['lightest']);
+            });
+            themesList.appendChild(themeNode);
+        };
+    
+        themesContainer.appendChild(textNode);
+        themesContainer.appendChild(themesList);
+        container.append(themesContainer);
+    }
+    
+        /*------------------------------------------------------------
+        |
+        | 2.3 DOM ELEMENTS
+        |
+        ------------------------------------------------------------*/
+    
+    document.head.insertAdjacentHTML('beforeend','<style>' + themeStyles + '</style>');
+    document.head.insertAdjacentHTML('beforeend','<style>' + darkModeStyles + '</style>');
+    
+    colours = getLocalStorage('colour-theme');
+    
+    if (colours == null) {
+        document.documentElement.style.setProperty('--darkest', themes[3]['darkest']);
+        document.documentElement.style.setProperty('--dark', themes[3]['dark']);
+        document.documentElement.style.setProperty('--light', themes[3]['light']);
+        document.documentElement.style.setProperty('--lightest', themes[3]['lightest']);
+    } else {
+        document.documentElement.style.setProperty('--darkest', themes[colours.theme]['darkest']);
+        document.documentElement.style.setProperty('--dark', themes[colours.theme]['dark']);
+        document.documentElement.style.setProperty('--light', themes[colours.theme]['light']);
+        document.documentElement.style.setProperty('--lightest', themes[colours.theme]['lightest']);
+    }
+    
+    /*--------------------------------------------------------------
+    3.0 FOUNDATIONS
+    --------------------------------------------------------------*/
+    
+        /*------------------------------------------------------------
+        |
+        | 3.1 FETCH DEPENDENCIES
+        |
+        ------------------------------------------------------------*/
+    
+    async function fetchDependencies() {
+        let response = await fetch('https://raw.githubusercontent.com/alexlostorto/sparx/main/release.json');
+        let json = await response.json();
+    
+        for (url of json.dependencies.js) {
+            let js = document.createElement("script");
+            js.src = url;
+            js.async = false;
+            js.defer = false;
+            document.head.appendChild(js);
+        }
+    
+        for (url of json.dependencies.css) {
+            let link = document.createElement("link");
+            link.href = url;
+            link.rel = "stylesheet"
+            document.head.appendChild(link);
+        }
+    }
+    
+    fetchDependencies();
+    
+        /*------------------------------------------------------------
+        |
+        | 3.2 MUTATION OBSERVER
+        |
+        ------------------------------------------------------------*/
+    
+    const mutationObserver = new MutationObserver(function(mutations) {
+        mutations.forEach(function() {
+            main();
+        });
+    });
+    
+    mutationObserver.observe(document.documentElement, {
+        attributeFilter: [ "class" ],
+        characterData: true,
+        childList: true,
+        subtree: true,
+        characterDataOldValue: true
+    });
+    
+    /*--------------------------------------------------------------
+    4.0 DATABASE
+    --------------------------------------------------------------*/
+    
+        /*------------------------------------------------------------
+        |
+        | 4.1 VARIABLES
+        |
+        ------------------------------------------------------------*/
+    
+    console.log(JSON.parse(localStorage.getItem('sparx-data')));
+    
+    const appName = 'data-pddjp';
+    const apiKey = 'ZTxLUr2NMrbV12Bn5CGA5qGfmoG48pBhQAyEnPsClNqmVsPmAe4OM4R8C2I5T46z';
+    const mongoDatabaseURL = `https://data.mongodb-api.com/app/${appName}/endpoint/data/v1/action/`;
+    let authorisedToken = null;
+    let tokenLife = 0;
+    let userDocumentId = null;
+    let userName = null;
+    let userData = null;
+    
+        /*------------------------------------------------------------
+        |
+        | 4.2 FUNCTIONS
+        |
+        ------------------------------------------------------------*/
+    
+    async function authorise() {
+        timeAlive = getTimestampInSeconds() - tokenLife;
+        
+        if (timeAlive >= 1740) {
+            let jsondata = {
+                'key': apiKey
+            }
+    
+            let settings = {
+                "async": true,
+                "crossDomain": true,
+                "method": "POST",
+                "headers": {
+                    'Content-Type': 'application/json'
+                },
+                'processData': false,
+                body: JSON.stringify(jsondata)
+            }
+    
+            let response = await (await fetch(`https://realm.mongodb.com/api/client/v2.0/app/${appName}/auth/providers/api-key/login`, settings)).json();
+            authorisedToken = response.access_token;
+    
+            tokenLife = getTimestampInSeconds();
+        }
+    
+        return authorisedToken;
+    }
+    
+    async function contactDatabase(action, database, collection, content=false) {
+        let token = await authorise();
+    
+        const jsonData = {
+            'database': database,
+            'collection': collection,
+            'dataSource': 'Sparx',
+        }
+    
+        if (content !== false && action == 'updateOne') {
+            jsonData.filter = { "_id": { "$oid": content[1] } };
+            jsonData.update = content[0];
+        } else if (content !== false && action == 'findOne') {
+            jsonData.filter = content;
+        } else if (content !== false) {
+            jsonData.document = content;
+        }
+    
+        const settings = {
+            "async": true,
+            "crossDomain": true,
+            "method": "POST",
+            headers: {
+                'Authorization': 'Bearer ' + token,
+                'Content-Type': 'application/json'
+            },
+            'processData': false,
+            body: JSON.stringify(jsonData)
+        }
+    
+        response = await (await fetch(mongoDatabaseURL + action, settings)).json();
+        
+        return response
+    }
+    
+    async function checkUser() {
+        let response = await contactDatabase('find', 'users', 'user-data'); 
+    
+        // Initialise the 'users' collection if it doesn't exist
+        if (response.documents.length == 0) {
+            await contactDatabase('insertOne', 'users', 'user-data', {users: {}});
+            response = await contactDatabase('find', 'users', 'user-data'); 
+        }
+    
+        const documentId = response.documents[0]._id; 
+        const users = response.documents[0].users;
+    
+        hash = md5(userName)
+    
+        if (!(hash in users)) {
+            // Create a new document for the user's answers in the 'answers' database
+            let newDocumentId = await (await contactDatabase('insertOne', 'answers', 'user-data', {answers: {}})).insertedId;
+    
+            let dateObject = new Date().toJSON();
+            let date = dateObject.slice(0, 10);
+            let time = dateObject.slice(11, 19);
+            users[hash] = {};
+            users[hash].id = newDocumentId;
+            users[hash].user = userName;
+            users[hash].created = `${date} ${time}`;
+            users[hash]['last-login'] = `${date} ${time}`;
+            contactDatabase('updateOne', 'users', 'user-data', [{"users": users}, documentId]);
+        } 
+    
+        userDocumentId = users[hash].id;
+    
+        // Check if the ID points to an existing document in the 'answers' database
+        response = await contactDatabase('findOne', 'answers', 'user-data', { "_id": { "$oid": users[hash].id }}); 
+    
+        let dateObject = new Date().toJSON();
+        let date = dateObject.slice(0, 10);
+        let time = dateObject.slice(11, 19);
+        users[hash]['last-login'] = `${date} ${time}`;
+        contactDatabase('updateOne', 'users', 'user-data', [{"users": users}, documentId]);
+        
+        let userDocument = await( await contactDatabase('findOne', 'answers', 'user-data', { "_id": { "$oid": userDocumentId }})).document
+        
+        if (userDocument === null) {
+            // Create a new document for the user's answers in the 'answers' database
+            let newDocumentId = await (await contactDatabase('insertOne', 'answers', 'user-data', {answers: {}})).insertedId;
+    
+            users[hash].id = newDocumentId;
+            
+            contactDatabase('updateOne', 'users', 'user-data', [{"users": users}, documentId]);
+        } else {
+            userData = userDocument.answers;
+        }
+    }
+    
+    async function sendAnswerToDatabase() {
+        await sleep(500);
+    
+        let correctStatusElement = document.querySelector('.page.result .result-inner .correct');
+        console.log(correctStatusElement);
+        if (correctStatusElement !== null) {
+            if (question in userData) {
+                console.log("Question already in database");
+                return;
+            }
+        
+            // Update MongoDB database if answer is correct
+            try {
+                console.log("POSTing answer data to database")
+                let dateObject = new Date().toJSON();
+                let date = dateObject.slice(0, 10);
+                let time = dateObject.slice(11, 19);
+                let questionDict = {};
+                questionDict.answer = answer;
+                questionDict.time = `${date} ${time}`;
+                userData[question] = questionDict;
+                contactDatabase('updateOne', 'answers', 'user-data', [{"answers": userData}, userDocumentId]);
+            } catch(err) {console.log(err)}
+        }
+    }
+    
+    /*--------------------------------------------------------------
+    5.0 MAIN
+    --------------------------------------------------------------*/
+    
+        /*------------------------------------------------------------
+        |
+        | 5.1 VARIABLES
+        |
+        ------------------------------------------------------------*/
+    
+    let question = null;
+    let answer = null;
+    
+        /*------------------------------------------------------------
+        |
+        | 5.2 FUNCTIONS
+        |
+        ------------------------------------------------------------*/
+    
+    async function main() {    
+        if (document.querySelector('.package-container') !== null) { showThemes(); }
+    
+        if (document.querySelector('.status-bar-label.status-bar-label-username') !== null && userName == null) { userName = document.querySelector('.status-bar-label.status-bar-label-username').textContent }
+    
+        const xpElement = document.querySelector('.status-bar-label-text') //XP header
+        if (xpElement !== null) {
+            xpElement.textContent = "It doesn't matter :)";
+        } 
+    
+        // Display stored answer
+        let correctStatusElement = document.querySelector('.page.result .result-inner .correct');
+        if (correctStatusElement !== null && document.querySelector('#shown-answer') === null) {
+            try {
+                const bookworkCodeElement = document.querySelector('.bookwork-code');
+                let bookworkCode = bookworkCodeElement.textContent;
+                bookworkCode = bookworkCode.replace("Bookwork code: ", '');
+                
+                const sparxData = JSON.parse(localStorage.getItem('sparx-data'));
+                let answer = sparxData[bookworkCode];
+                answer = answer.map(element => element.replace('\n', ''));
+                answer = answer.map(element => element.replace(/\\\\/g, '\\'));
+    
+                // Show saved answer 
+                if (answer.every(hasSource)) {
+                    const divNode = document.createElement('div');
+                    const imageNode = document.createElement('img');
+                    imageNode.src = answer.toString();
+                    imageNode.setAttribute('id', 'shown-answer');
+                    imageNode.style['height'] = "4rem";
+    
+                    divNode.appendChild(imageNode);
+                    divNode.style['margin-bottom'] = '20px';
+                    divNode.style['margin-top'] = '20px';
+                    divNode.style.color = grey;
+                    document.querySelector('.result-inner').append(divNode);
+                } else {
+                    let answers = answer.join(', ');
+    
+                    const textNode = document.createElement('span');
+                    textNode.textContent = `Answer: ${answers}`;
+                    textNode.style['font-size'] = '2.5rem';
+                    textNode.style['color'] = 'white';
+                    textNode.setAttribute('id', 'shown-answer');
+    
+                    const divNode = document.createElement('div');
+                    divNode.style['display'] = 'flex';
+                    divNode.style['align-items'] = 'center';
+                    divNode.style['justify-content'] = 'center';
+    
+                    divNode.appendChild(textNode);
+                    divNode.style['margin-bottom'] = '20px';
+                    divNode.style['margin-top'] = '20px';
+                    document.querySelector('.result-inner').append(divNode);
+    
+                    katex.render(answers, document.getElementById('shown-answer'), {
+                        throwOnError: false
+                    });
+                }
+            } catch(err) {console.log(err)}
+        }
+    
+        // Display correct bookwork code 
+        const bookworkCodeElement = document.querySelector('.wac-text-container .bookwork-code');
+        if (bookworkCodeElement !== null && document.querySelector('#custom-answer') === null) {
+            try {
+                let bookworkCode = bookworkCodeElement.textContent;
+                bookworkCode = bookworkCode.replace("Bookwork code: ", '');
+                console.log(bookworkCode);
+    
+                const sparxData = JSON.parse(localStorage.getItem('sparx-data'));
+                let bookworkAnswer = sparxData[bookworkCode];
+                bookworkAnswer = bookworkAnswer.map(element => element.replace('\n', ''));
+                bookworkAnswer = bookworkAnswer.map(element => element.replace(/\\\\/g, '\\'));
+                console.log(bookworkAnswer);
+    
+                // Show saved answer 
+                if (bookworkAnswer.every(hasSource)) {
+                    const divNode = document.createElement('div');
+                    const imageNode = document.createElement('img');
+                    imageNode.src = bookworkAnswer.toString();
+                    imageNode.setAttribute('id', 'custom-answer');
+                    imageNode.style['width'] = "50%";
+    
+                    divNode.appendChild(imageNode);
+                    divNode.style['margin-bottom'] = '20px';
+                    divNode.style.color = grey;
+                    document.querySelector('.wac-text-container').append(divNode);
+                } else {
+                    let answers = bookworkAnswer.join(', ');
+                    const textNode = document.createElement('span');
+                    textNode.textContent = `Answer: ${answers}`;
+                    textNode.style['color'] = 'white';
+    
+                    const divNode = document.createElement('div');
+                    divNode.style['display'] = 'flex';
+                    divNode.style['align-items'] = 'center';
+                    divNode.style['justify-content'] = 'center';
+                    textNode.setAttribute('id', 'custom-answer');
+    
+                    divNode.appendChild(textNode);
+                    divNode.style['margin-bottom'] = '20px';
+                    document.querySelector('.wac-text-container').append(divNode);
+    
+                    katex.render(answers, document.getElementById('custom-answer'), {
+                        throwOnError: false
+                    });
+                }
+    
+                // Get choices
+                answerOptions = document.querySelectorAll('.choice-wac-options .item');
+                if (answerOptions !== null) {
+                    for (let i = 0; i < answerOptions.length; i++) {
+                        answerOption = answerOptions[i].textContent;
+                        let similarityCount = 0
+                        for (let a = 0; a < bookworkAnswer.length; a++) {
+                            if (answerOption.includes(bookworkAnswer[a])) {similarityCount++;}
+                        }
+                        if (similarityCount == bookworkAnswer.length){
+                            answerOptions[i].style.border = '5px solid var(--light)';
+                        }
+                        let answerArray = bookworkAnswer.join('');
+                        answerArray = answerArray.split('');
+                        uniques = answerArray.unique();
+                        answerOptions[i].querySelector('.answer-markup.choice-wac-option').style.border = '5px solid var(--orange)';
+                        for (let u = 0; u < uniques.length; u++) {
+                            if (!(answerOption.includes(uniques[u]))) {
+                                answerOptions[i].querySelector('.answer-markup.choice-wac-option').style.border = 'none';
+                            }
+                        }
+                    }
+                }
+            } catch (err) {console.log(err)}
+        }
+    
+        let questionContainer = document.querySelector('.question');
+        if (questionContainer !== null) {
+            question = questionContainer.innerText;
+            questionImages = document.querySelectorAll('[data-test-target="image-img"]');
+    
+            question = question.replace(/\r?\n|\r/g, '');
+    
+            if (questionImages.length == 0 | questionImages[0]) { console.log(question); }
+            else {
+                questionImages.forEach(function(image) {
+                    question += `$$ ${image.currentSrc}`;
+                })
+                console.log(question);
+            }
+        }
+    }
+    
+    
+    function getInput() {
+        function addText(nodeList) {
+            if (nodeList === null || nodeList.length == 0) { return }
+            for (let i = 0; i < nodeList.length; i++) {
+                let answer = '';
+                let text = nodeList[i].querySelector('span.text');
+                if (text !== null) {
+                    for (let i = 0; i < text.childNodes.length; i++) {
+                        if (text.childNodes[i].className == 'katex') {
+                            let latex = text.childNodes[i].querySelector('annotation');
+                            if (latex !== null) {
+                                answer += latex.textContent;
+                            } 
+                        } else {
+                            answer += text.childNodes[i].textContent;
+                        }
+                    }
+                } 
+                let image = nodeList[i].querySelector('[data-test-target="image-img"]');
+                if (image !== null) {
+                    const source = image.currentSrc;
+                    answer += source.toString();
+                }
+                answerData.push(answer);
+            }
+        }
+    
+        let answerData = [];
+    
+        // Get input value
+        const keypadInputs = document.querySelectorAll('.number-input');
+        if (keypadInputs.length > 0) {
+            for (let i = 0; i < keypadInputs.length; i++) {
+                inputValue = keypadInputs[i].attributes[10].value;
+                answerData.push(inputValue);
+            }
+        }
+    
+        // Get cards selected 
+        const slots = document.querySelectorAll('.slots .slot');
+        addText(slots);
+    
+        // Get choice selected 
+        const chosen = document.querySelectorAll('.answer-part .gap-card.selected, .choice.selected');
+        addText(chosen);
+    
+        console.log(answerData);
+        return answerData;
+    }
+    
+    main();
+    checkUser();
+    setInterval(credits, 5000);
+    
+    /*--------------------------------------------------------------
+    6.0 EVENT LISTENERS
+    --------------------------------------------------------------*/
+    
+    document.addEventListener("click", function(e) {
+        if(e.target) {
+            try {
+                if (
+                    (e.target.id == "skill-delivery-submit-button" && e.target.innerText == "Submit") ||
+                    (e.target.className == "button-text" && e.target.textContent == "Submit") || 
+                    (e.target.className == "button-all" && e.target.textContent == "Submit") || 
+                    (e.target.className == "button-icon button-icon-right" && e.target.parentElement.innerText == "Submit") ||
+                    (e.target.parentElement.className == "button-icon button-icon-right" && e.target.parentElement.parentElement.innerText == "Submit") ||
+                    (e.target.parentElement.parentElement.className == "button-icon button-icon-right" && e.target.parentElement.parentElement.parentElement.innerText == "Submit")) {
+    
+                    console.log("---PROCESSING ANSWER---");
+        
+                    const bookworkCodeElement = document.querySelector('.bookwork-code');
+                    let bookworkCode = bookworkCodeElement.textContent;
+                    bookworkCode = bookworkCode.replace("Bookwork code: ", '');
+        
+                    answer = getInput(bookworkCode);
+                    updateLocalStorage('sparx-data', bookworkCode, answer);
+    
+                    sendAnswerToDatabase();
+                }
+            } catch(err) {}
+        }
+    });
+    
+    document.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            // Submit answer
+            const submitButton = document.querySelector('#skill-delivery-submit-button');
+            if (submitButton !== null) {
+                console.log("---PROCESSING ANSWER---");
+    
+                const bookworkCodeElement = document.querySelector('.bookwork-code');
+                let bookworkCode = bookworkCodeElement.textContent;
+                bookworkCode = bookworkCode.replace("Bookwork code: ", '');
+    
+                answer = getInput(bookworkCode);
+                updateLocalStorage('sparx-data', bookworkCode, answer);
+    
+                sendAnswerToDatabase();
+            }
+    
+            // Select next task
+            const taskItems = document.querySelectorAll('.taskitem-selectable');
+            if (taskItems.length > 0) {
+                taskItems.forEach(function(taskItem) {
+                    if (!(taskItem.classList.contains('done'))) {
+                        taskItem.click();
+                    }
+                });
+            }
+    
+            const revisionItems = document.querySelectorAll('.revision-task-item.btn-menu-item');
+            if (revisionItems.length > 0) {
+                revisionItems.forEach(function(revisionItem) {
+                    if (revisionItem.querySelector('.pill.done') === null) {
+                        revisionItem.click();
+                    }
+                });
+            }
+    
+            // Select auto higher or lower
+            const minigames = document.querySelectorAll('.minigame-choice-card');
+            if (minigames.length > 0) {
+                minigames.forEach(function(minigame) {
+                    if (minigame.querySelector('.minigame-title').textContent == 'Auto Higher or Lower?') {
+                        minigame.click();
+                    }
+                });
+            }
+        }
+    });
+    
